@@ -1,4 +1,61 @@
-p {
-    color: rgb(255, 64, 0);
+
+h1 {
+    color: var(--color-white);
+    font-size: 36px;
 }
- 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+   max-width: 100%;
+   display: inline-block;
+}
+
+@font-face
+{
+    font-family: "Mona Sans";
+    src: url("assets/fonts/mona-sans.woff2") format("woff2");
+    font-weight: 200 900;
+    font-display: swap;
+    font-feature-settings: "liga" 0;
+}
+@font-face 
+{
+    font-family: "Mona Sans Mono";
+    src: url("assets/fonts/mona-sans-mono.woff2") format("woff2");
+    font-weight: 200 900;
+    font-display: swap;
+    font-feature-settings: "liga" 0;
+}
+
+:root {
+    --font-body: "Mona Sans";
+    --color-black: #000;
+    --color-white: #fff;
+    --color-orange: #ff4800;
+    --color-border-muted: #44ff00;
+    --container-width:1280px;
+    --spacing-64: 64px;
+}
+.body {
+   font-family: var(--font-body);
+}
+.hero {
+    background: var(--color-black);
+    color:var(--color-orange);
+    text-align: center;
+}
+
+.container{
+    max-width:var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero-content{
+    padding: var(--spacing-64);
+    border-left: 1px solid var(--color-border-muted);
+    border-right: 1px solid var(--color-border-muted);
+}
