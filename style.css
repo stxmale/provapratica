@@ -1,14 +1,10 @@
 
-h1 {
-    color: var(--color-white);
-    font-size: 36px;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 img{
    max-width: 100%;
    display: inline-block;
@@ -54,8 +50,9 @@ img{
     margin-left: auto;
     margin-right: auto;
 }
+
 .hero-content{
-    padding: var(--spacing-64);
+    padding:var(--spacing-64);
     border-left: 1px solid var(--color-border-muted);
     border-right: 1px solid var(--color-border-muted);
 }
