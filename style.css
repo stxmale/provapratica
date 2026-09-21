@@ -31,11 +31,12 @@ img {
     --font-body: "Mona Sans";
     --font-mono: "Mona Sans Mono";
     --color-cursor: #00ff00;
-    --color-black: #000;
+    --color-black: #000000;
     --color-white: #fff;
     --color-orange: #ff4800;
     --color-border-muted: #ffffff;
     --color-muted: #A4AEA6;
+    --color-focus:#00ff00;
     --container-width:1280px;
     --spacing-64: 64px;
     --text-200-line-height:1.5;
@@ -43,7 +44,14 @@ img {
     --heading-1-line-height: 1.1;
     --eyebrown-font-size: 14px;
     --text-200-font-size:16px;
+    --color-button-primary:#ff4800;
+    --color-button-secondary:rgba(255 ,255 ,255 , 0.12);
+    --color-button-secondary-border:rgba(255 ,255 ,255 , 0.06);
    
+}
+@media (max-width: 640px) {
+    :root{ 
+        --heading-1-font-size:36px;}
 }
 
 body {
@@ -56,7 +64,7 @@ body {
      --hero-content-gap:1em;
 
     background: var(--color-black);
-    color:var(--color-orange);
+    color:var(--color-white);
     text-align: center;
 }
 
@@ -81,7 +89,7 @@ body {
     font-size: var(--eyebrown-font-size);
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--color-muted);
+    color: var(--color-orange);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,6 +105,7 @@ body {
     font-size: var(--heading-1-font-size);
     line-height: var(--heading-1-line-height);
 }
+
 .text-size-200{
     font-size:var(--text-200-font-size);
     line-height: var(--text-200-line-height);
@@ -111,3 +120,35 @@ body {
 .hero-image{
     margin-top: calc(64px - var(--hero-content-gap));
 }
+.button {
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid;
+    padding: 0.5em 1.2em;
+    font-weight: 500;
+    letter-spacing: 0.16px;
+    border-radius: 0.4em;
+    font-style: var(--color-white);
+    transition: background-color 300ms ease-in-out;
+}
+.button-primary{
+    background-color: var(--color-button-primary);
+    border-color: transparent;
+    
+}
+.button-primary:hover{
+    background-color: color-mix(in srgb, var(--color-button-primary), #000 20%)
+    
+}
+.button-secondary{
+    background-color: var(--color-button-secondary);
+    border-color: var(--color-button-secondary-border);  
+}
+.button-secondary:hover{
+    background-color: color-mix(in srgb, var(--color-button-secondary),#ffffff 25%)
+   
+}
+.button:focus-visible{
+    outline: 2px solid var(--color-focus);
+    outline-offset: 1px;
+} 
