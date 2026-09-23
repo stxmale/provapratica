@@ -6,149 +6,540 @@
 }
 
 img {
-   max-width: 100%;
-   display: inline-block;
+    display: inline-block;
+    max-width: 100%;
 }
 
-@font-face
-{
-    font-family: "Mona Sans";
-    src: url("assets/fonts/mona-sans.woff2") format("woff2");
-    font-weight: 200 900;
-    font-display: swap;
-    font-feature-settings: "liga" 0;
+@font-face {
+  font-family: "Mona Sans";
+  src: url("assets/fonts/mona-sans.woff2") format("woff2");
+  font-weight: 200 900;
+  font-display: swap;
+  font-feature-settings: "liga" 0;
 }
-@font-face 
-{
-    font-family: "Mona Sans Mono";
-    src: url("assets/fonts/mona-sans-mono.woff2") format("woff2");
-    font-weight: 200 900;
-    font-display: swap;
-    font-feature-settings: "liga" 0;
+@font-face {
+  font-family: "Mona Sans Mono";
+  src: url("assets/fonts/mona-sans-mono.woff2") format("woff2");
+  font-weight: 200 900;
+  font-display: swap;
+  font-feature-settings: "liga" 0;
 }
 
 :root {
     --font-body: "Mona Sans";
     --font-mono: "Mona Sans Mono";
-    --color-cursor: #00ff00;
-    --color-black: #000000;
+    --color-black: #000;
     --color-white: #fff;
-    --color-orange: #ff4800;
-    --color-border-muted: #ffffff;
     --color-muted: #A4AEA6;
-    --color-focus:#00ff00;
-    --container-width:1280px;
+    --color-border-muted: #191F1B;
+    --color-cursor: #5FED83;
+    --color-button-primary-bg: #08872B;
+    --color-button-secondary-bg: rgba(255, 255, 255, 0.12);
+    --color-button-secondary-border: rgba(255, 255, 255, 0.06);
+    --color-focus: #3094ff;
+    --container-width: 1280px;
     --spacing-64: 64px;
-    --text-200-line-height:1.5;
     --heading-1-font-size: 56px;
     --heading-1-line-height: 1.1;
-    --eyebrown-font-size: 14px;
-    --text-200-font-size:16px;
-    --color-button-primary:#ff4800;
-    --color-button-secondary:rgba(255 ,255 ,255 , 0.12);
-    --color-button-secondary-border:rgba(255 ,255 ,255 , 0.06);
-   
+    --eyebrow-font-size: 14px;
+    --text-200-font-size: 16px;
+    --text-200-line-height: 1.5;
+    --text-100-font-size: 0.875em;
+    --text-100-line-height: 1.5;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 550;
+    --border-width: 1px;
+    --focus-outline-width: 0.25em;
+    --focus-outline-offset: 0.125em;
+    --radius-control: 0.375em;
+    --radius-pill: 100em;
+    --layer-navigation: 90;
+    --layer-skip-link: 100;
 }
+
 @media (max-width: 640px) {
-    :root{ 
-        --heading-1-font-size:36px;}
+    :root {
+        --heading-1-font-size: 36px;
+    }
 }
 
 body {
-   font-family: var(--font-body);
-   -webkit-font-smoothing: antialiased;
- 
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
 }
+
 .hero {
-     --hero-text-max-widh:600;
-     --hero-content-gap:1em;
+    --hero-text-max-width: 600px;
+    --hero-content-gap: 1em;
 
     background: var(--color-black);
-    color:var(--color-white);
+    color: var(--color-white);
     text-align: center;
 }
 
 .container {
-    max-width:var(--container-width);
+    max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
 }
 
 .hero-content {
-    padding:var(--spacing-64);
+    padding: var(--spacing-64);
     border-left: 1px solid var(--color-border-muted);
     border-right: 1px solid var(--color-border-muted);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:var(--hero-content-gap)
-
+    gap: var(--hero-content-gap);
 }
+
 .eyebrow {
+    font-size: var(--eyebrow-font-size);
     font-family: var(--font-mono);
-    font-size: var(--eyebrown-font-size);
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--color-orange);
+    color: var(--color-muted);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.42em;
 }
+
 .eyebrow-cursor rect {
     fill: var(--color-cursor);
 }
+
 .heading {
     font-weight: 400;
 }
+
 .heading-size-1 {
     font-size: var(--heading-1-font-size);
     line-height: var(--heading-1-line-height);
 }
 
-.text-size-200{
-    font-size:var(--text-200-font-size);
+.text-size-200 {
+    font-size: var(--text-200-font-size);
     line-height: var(--text-200-line-height);
 }
-.hero-text{
-    max-width: var(--hero-text-max-widh);
+
+.hero-text {
+    max-width: var(--hero-text-max-width);
 }
-.button-group{
+
+.button-group {
     display: flex;
     gap: 1em;
 }
-.hero-image{
+
+.hero-image {
     margin-top: calc(64px - var(--hero-content-gap));
 }
+
 .button {
     text-decoration: none;
-    color: #ffffff;
+    color: inherit;
     border: 1px solid;
-    padding: 0.5em 1.2em;
+    padding: 0.6em 1.25em;
     font-weight: 500;
     letter-spacing: 0.16px;
-    border-radius: 0.4em;
-    font-style: var(--color-white);
+    border-radius: 0.375em;
     transition: background-color 300ms ease-in-out;
 }
-.button-primary{
-    background-color: var(--color-button-primary);
+
+.button-primary {
+    background-color: var(--color-button-primary-bg);
     border-color: transparent;
-    
 }
-.button-primary:hover{
-    background-color: color-mix(in srgb, var(--color-button-primary), #000 20%)
-    
+
+.button-primary:hover {
+    background-color: color-mix(in srgb, var(--color-button-primary-bg),#000 16%);
 }
-.button-secondary{
-    background-color: var(--color-button-secondary);
-    border-color: var(--color-button-secondary-border);  
+
+.button-secondary {
+     background-color: var(--color-button-secondary-bg);
+     border-color: var(--color-button-secondary-border);
 }
-.button-secondary:hover{
-    background-color: color-mix(in srgb, var(--color-button-secondary),#ffffff 25%)
-   
+
+.button-secondary:hover {
+    background-color: color-mix(in srgb, var(--color-button-secondary-bg),#fff 6%);
 }
-.button:focus-visible{
-    outline: 2px solid var(--color-focus);
-    outline-offset: 1px;
-} 
+
+.button:focus-visible {
+    outline: 4px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.skip-link {
+    --skip-link-offset-inline: 1em;
+    --skip-link-offset-block: 0.5em;
+    --skip-link-padding: 0.375em 1.25em;
+
+    position: absolute;
+    top: var(--skip-link-offset-block);
+    left: var(--skip-link-offset-inline);
+    z-index: var(--layer-skip-link);
+    padding: var(--skip-link-padding);
+    border-radius: var(--radius-control);
+    background: var(--color-button-primary-bg);
+    color: var(--color-white);
+    transform: translateY(calc(-100% - var(--skip-link-offset-block)));
+}
+
+.skip-link:focus {
+    transform: none;
+    outline: var(--focus-outline-width) solid var(--color-focus);
+    outline-offset: var(--focus-outline-offset);
+}
+
+.navigation {
+    --navigation-height: 3.5em;
+    --navigation-logo-size: 1.5em;
+    --navigation-logo-margin-start: 1em;
+    --navigation-logo-margin-end: 0.5em;
+    --navigation-brand-padding-end: 1em;
+    --navigation-back-arrow-font-size: 1.75em;
+    --navigation-back-arrow-line-height: 1;
+    --navigation-back-arrow-offset: -0.75em;
+    --navigation-title-font-size: var(--text-100-font-size);
+    --navigation-title-line-height: var(--text-100-line-height);
+    --navigation-link-font-size: var(--text-100-font-size);
+    --navigation-link-padding: 1em;
+    --navigation-link-hover-background: #151D17;
+    --navigation-toggle-font-size: 1em;
+    --navigation-toggle-width: 3em;
+    --navigation-toggle-padding: 0.25em 0.75em;
+    --navigation-toggle-open-background: #090D0A;
+    --navigation-icon-size: 1em;
+    --navigation-reveal-duration: 0.5s;
+    --navigation-reveal-easing: ease;
+    --navigation-reveal-offset: -1.25em;
+
+    position: relative;
+    z-index: var(--layer-navigation);
+    font-size: var(--text-200-font-size);
+    line-height: var(--text-200-line-height);
+    color: var(--color-white);
+    background: var(--color-black);
+    border-bottom: var(--border-width) solid var(--color-border-muted);
+}
+
+.navigation a {
+    color: inherit;
+}
+
+.navigation a:focus-visible, .navigation button:focus-visible {
+    outline: var(--focus-outline-width) solid var(--color-focus);
+    outline-offset: var(--focus-outline-offset);
+}
+
+.navigation::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + var(--border-width));
+    left: 0;
+    right: 0;
+    height: var(--border-width);
+    background: var(--color-cursor);
+    pointer-events: none;
+}
+
+.navigation-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navigation-brand {
+    display: flex;
+    align-items: center;
+    height: calc(var(--navigation-height) - var(--border-width));
+    flex-shrink: 0;
+}
+
+.navigation-logo {
+    display: flex;
+    position: relative;
+    margin-left: var(--navigation-logo-margin-start);
+    margin-right: var(--navigation-logo-margin-end);
+}
+
+.navigation-logo img {
+    display: block;
+    width: var(--navigation-logo-size);
+    height: var(--navigation-logo-size);
+}
+
+.navigation-back-arrow {
+    position: absolute;
+    top: 50%;
+    left: var(--navigation-back-arrow-offset);
+    transform: translateY(-50%);
+    opacity: 0;
+    color: var(--color-muted);
+    font-size: var(--navigation-back-arrow-font-size);
+    line-height: var(--navigation-back-arrow-line-height);
+}
+
+.navigation-logo:hover .navigation-back-arrow {
+    opacity: 1;
+}
+
+.navigation-title {
+    text-decoration: none;
+    font-size: var(--navigation-title-font-size);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--navigation-title-line-height);
+}
+
+.navigation-title span {
+    color: var(--color-muted);
+}
+
+.navigation-menu {
+    width: 100%;
+}
+
+.navigation-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-list a {
+    display: flex;
+    align-items: center;
+    padding: var(--navigation-link-padding);
+    font-size: var(--navigation-link-font-size);
+    line-height: var(--text-100-line-height);
+    text-decoration: none;
+}
+
+.navigation-list a:hover {
+    color: var(--color-white);
+}
+
+/* Il layout "compatto" dipende se l'attributo popover è presente (su desktop viene rimosso via JS) */
+.navigation:has(.navigation-panel[popover]) {
+    height: var(--navigation-height);
+}
+
+.navigation:has(.navigation-panel[popover]) .navigation-content {
+    height: 100%;
+    flex-wrap: nowrap;
+}
+
+.navigation-menu:has(.navigation-panel[popover]) {
+    width: auto;
+    margin-left: auto;
+}
+
+.navigation-toggle {
+    anchor-name: --navigation-toggle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--navigation-toggle-width);
+    height: 100%;
+    padding: var(--navigation-toggle-padding);
+    font-family: inherit;
+    font-size: var(--navigation-toggle-font-size);
+    line-height: var(--text-100-line-height);
+    cursor: pointer;
+    border: 0;
+    border-left: var(--border-width) solid var(--color-border-muted);
+    background: transparent;
+    color: var(--color-white);
+}
+
+.navigation-icon {
+    display: block;
+    width: var(--navigation-icon-size);
+    height: var(--navigation-icon-size);
+    flex-shrink: 0;
+}
+
+.navigation-icon-close {
+    display: none;
+}
+
+.navigation-label {
+    display: none;
+}
+
+.navigation-panel[popover] {
+    position: fixed;
+    position-anchor: --navigation-toggle;
+    inset: auto;
+    top: calc(anchor(bottom) + var(--border-width));
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--color-white);
+    background: var(--color-black);
+    max-height: calc(100dvh - var(--navigation-height));
+    overflow-y: auto;
+}
+
+.navigation-menu:has(:popover-open) .navigation-toggle {
+    background: var(--navigation-toggle-open-background);
+}
+
+.navigation-menu:has(:popover-open) .navigation-icon-open {
+    display: none;
+}
+
+.navigation-menu:has(:popover-open) .navigation-icon-close {
+    display: block;
+}
+
+.navigation-toggle:focus-visible {
+    outline-offset: calc(-1 * var(--focus-outline-offset));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .navigation-panel:popover-open {
+        animation: reveal var(--navigation-reveal-duration) var(--navigation-reveal-easing);
+    }
+    @keyframes reveal {
+        from {
+            opacity: 0;
+            transform: translateY(var(--navigation-reveal-offset));
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Su tablet cambia il layout, ma il popover resta attivo */
+@media (min-width: 48rem) {
+    .navigation {
+        --navigation-height: 4em;
+        --navigation-title-font-size: 1em;
+        --navigation-title-line-height: 1;
+        --navigation-toggle-font-size: var(--text-100-font-size);
+        --navigation-toggle-min-width: 6em;
+        --navigation-toggle-gap: 0.5em;
+        --navigation-list-gap: 0.0625em;
+        --navigation-list-padding: 0.5em 1em;
+        --navigation-link-min-height: 2.5em;
+        --navigation-link-padding: 0.5em 0.75em;
+    }
+    .navigation-brand {
+        padding-right: var(--navigation-brand-padding-end);
+        border-right: var(--border-width) solid var(--color-border-muted);
+    }
+    .navigation-menu:has(.navigation-panel[popover]) {
+        position: relative;
+    }
+    .navigation-toggle {
+        width: max-content;
+        min-width: var(--navigation-toggle-min-width);
+        gap: var(--navigation-toggle-gap);
+        border-right: var(--border-width) solid var(--color-border-muted);
+        font-weight: var(--font-weight-semibold);
+    }
+    .navigation-label {
+        display: inline;
+        white-space: nowrap;
+    }
+    .navigation-panel[popover] {
+        left: auto;
+        right: anchor(right);
+        width: anchor-size(width);
+        border: var(--border-width) solid var(--color-border-muted);
+        border-top: 0;
+    }
+    .navigation-list {
+        display: grid;
+        gap: var(--navigation-list-gap);
+        padding: var(--navigation-list-padding);
+    }
+    .navigation-list a {
+        min-height: var(--navigation-link-min-height);
+        color: var(--color-muted);
+        border-radius: var(--radius-control);
+    }
+    .navigation-list a:hover, .navigation-list a:focus-visible {
+        background: var(--navigation-link-hover-background);
+    }
+}
+
+/* Su desktop JS rimuove popover e gli elementi si dispongono in linea */
+@media (min-width: 63.25rem) {
+    .navigation {
+        --navigation-inline-list-padding: 0 0 0 1em;
+        --navigation-inline-link-padding: 0 0.25em;
+        --navigation-inline-label-padding: 0.25em 0.75em;
+    }
+    .navigation-content {
+        flex-wrap: nowrap;
+        height: calc(var(--navigation-height) - var(--border-width));
+    }
+    .navigation-menu:has(.navigation-panel:not([popover])) {
+        width: auto;
+        margin-left: 0;
+    }
+    .navigation-panel:not([popover]) {
+        position: static;
+        height: 100%;
+        border: 0;
+        overflow: visible;
+    }
+    .navigation-panel:not([popover]) .navigation-list {
+        display: flex;
+        height: 100%;
+        gap: 0;
+        padding: var(--navigation-inline-list-padding);
+    }
+    .navigation-panel:not([popover]) .navigation-list a {
+        height: 100%;
+        padding: var(--navigation-inline-link-padding);
+    }
+    .navigation-panel:not([popover]) .navigation-list a span {
+        padding: var(--navigation-inline-label-padding);
+        border-radius: var(--radius-pill);
+    }
+    .navigation-panel:not([popover]) .navigation-list a:hover, .navigation-panel:not([popover]) .navigation-list a:focus-visible {
+        background: transparent;
+    }
+    .navigation-panel:not([popover]) .navigation-list a:hover span {
+        background: var(--navigation-link-hover-background);
+    }
+    .navigation-panel:not([popover]) .navigation-list a:focus-visible {
+        outline: none;
+    }
+    .navigation-panel:not([popover]) .navigation-list a:focus-visible span {
+        outline: var(--focus-outline-width) solid var(--color-focus);
+        outline-offset: var(--focus-outline-offset);
+    }
+}
+
+/* Destinazioni provvisorie dei link, da completare/sostituire in base al vostro case study */
+.chapters {
+    --chapters-padding: 2em 1.5em;
+    --chapters-section-min-height: 65vh;
+    --chapters-section-padding-top: 2em;
+
+    padding: var(--chapters-padding);
+    color: var(--color-white);
+    background: var(--color-black);
+    line-height: var(--text-200-line-height);
+}
+
+.chapters section {
+    min-height: var(--chapters-section-min-height);
+    padding-top: var(--chapters-section-padding-top);
+    border-top: var(--border-width) solid var(--color-border-muted);
+}
+
+.chapters a {
+    color: inherit;
+}

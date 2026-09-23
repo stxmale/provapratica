@@ -3,33 +3,73 @@
 <head>
 
     <meta charset='utf-8'/>
-    <meta name='viewport' content='width=device-width, initial-scale=1'/>
-    <title>provapratica1</title>
-    <link rel="stylesheet" href="style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prova Pratica Marco Escher</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-     <header></header>
-     <main>
-         <section class="hero">
-            <div class="hero-content container">
-        <p class="eyebrow"> alessandro vincenzi • UI/UX Design • 2026
-            <svg class="eyebrow-cursor" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="8" height="10" fill="#5FED83"/>
-            </svg>
-        </p>
-        <h1 class="heading heading-size-1">Sentencell. Dare forma a una scienza complessa.</h1>
-        <p class="text text-size-200"> Come dare accesso a una scienza complessa? La mia reinterpretazione didattica di Sentcell parte dai livelli di lettura.</p>
-        <div class="button-group"> 
-            <a href="#storia" class="button button-primary">Leggi la storia</a>
-            <a href="#figma" class="button button-secondary">Vedi il Figma</a>
-        </div>
-            <img src="assets/images/sentcell-home.webp" alt="screenshot desktop della home">
-            </div>
-         </section>
-   </main>
 
-   <footer></footer>
-   
+<body>
+  
+  <a class="skip-link" href="#top">Vai al contenuto</a>
+  <header class="navigation">
+    <div class="navigation-content">
+      <div class="navigation-brand">
+        <a class="navigation-logo" href="https://github.com/education" aria-label="GitHub Education">
+          <span class="navigation-back-arrow" aria-hidden="true">‹</span>
+          <img src="assets/images/github-mark.svg" width="24" height="24" alt="" />
+        </a>
+        <a class="navigation-title" href="#top">GitHub <span>Student Stories</span></a>
+      </div>
+      <div class="navigation-menu">
+        <button class="navigation-toggle" type="button" aria-label="Menu dei capitoli" popovertarget="navigation-panel">
+          <img class="navigation-icon navigation-icon-open" src="assets/images/menu.svg" width="16" height="16" alt="" aria-hidden="true" />
+          <img class="navigation-icon navigation-icon-close" src="assets/images/close.svg" width="16" height="16" alt="" aria-hidden="true" />
+          <span class="navigation-label">Menu dei capitoli</span>
+        </button>
+        <nav id="navigation-panel" class="navigation-panel" popover="auto" aria-label="Capitoli della storia">
+          <ul class="navigation-list">
+          <li><a href="#concept"><span>Concept</span></a></li>
+          <li><a href="#sitemap"><span>Sitemap</span></a></li>
+          <li><a href="#assets"><span>Assets</span></a></li>
+          <li><a href="#prototipi"><span>Prototipi</span></a></li>
+          <li><a href="#highlights"><span>Highlights</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="top" tabindex="-1">
+    <section class="hero">
+      <div class="hero-content container">
+        
+        <p class="eyebrow">
+          Danilo Morgagni · UI/UX Design · 2026
+          <svg class="eyebrow-cursor" width="8" height="10" viewBox="0 0 8 10" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="8" height="10" fill="#5FED83" />
+          </svg>
+        </p>
+        <h1 class="heading heading-size-1">Sentcell. Dare forma a una scienza complessa.</h1>
+        <p class="hero-text text text-size-200">Come dare accesso a una scienza complessa? La mia
+          reinterpretazione<br>didattica di Sentcell parte dai livelli
+          di lettura.</p>
+        <div class="button-group">
+          <a href="#storia" class="button button-primary">Leggi la storia</a>
+          <a href="#elaborati" class="button button-secondary">Esplora gli elaborati</a>
+        </div>
+        <img class="hero-image" src="assets/images/display.png" alt="screenshot desktop della home di sentcell">
+        
+      </div>
+    </section>
+    <!-- Destinazioni provvisorie dei link, da completare/sostituire in base al vostro case study -->
+    <div class="chapters container" id="storia">
+      <section id="concept"><h2 class="heading">Concept</h2><a href="#top">Torna all’inizio</a></section>
+      <section id="sitemap"><h2 class="heading">Sitemap</h2><a href="#top">Torna all’inizio</a></section>
+      <section id="assets"><h2 class="heading">Assets</h2><a href="#top">Torna all’inizio</a></section>
+      <section id="prototipi"><h2 class="heading" id="elaborati">Prototipi</h2><a href="#top">Torna all’inizio</a></section>
+      <section id="highlights"><h2 class="heading">Highlights</h2><a href="#top">Torna all’inizio</a></section>
+    </div>
+  </main>
+  <footer></footer>
 </body>
-</html>
