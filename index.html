@@ -4,7 +4,7 @@
 
     <meta charset='utf-8'/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prova Pratica Marco Escher</title>
+  <title>Prova Pratica Alessandro Vincenzi</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -16,7 +16,7 @@
     <div class="navigation-content">
       <div class="navigation-brand">
         <a class="navigation-logo" href="https://github.com/education" aria-label="GitHub Education">
-          <span class="navigation-back-arrow" aria-hidden="true">‹</span>
+          <span class="navigation-back-arrow" aria-hidden="true"></span>
           <img src="assets/images/github-mark.svg" width="24" height="24" alt="" />
         </a>
         <a class="navigation-title" href="#top">GitHub <span>Student Stories</span></a>
@@ -44,33 +44,66 @@
       <div class="hero-content container">
         
         <p class="eyebrow">
-          Danilo Morgagni · UI/UX Design · 2026
+          ALESSANDRO VINCENZI · UI/UX Design · 2026/2027
           <svg class="eyebrow-cursor" width="8" height="10" viewBox="0 0 8 10" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <rect width="8" height="10" fill="#5FED83" />
           </svg>
         </p>
-        <h1 class="heading heading-size-1">Radici. Un archivio di ricordi.
-        </h1>
-        <p class="hero-text text text-size-200">Come dare accesso a una scienza complessa? La mia
-          reinterpretazione<br>didattica di Sentcell parte dai livelli
-          di lettura.</p>
+        <h1 class="heading heading-size-1">Radici.<br>Un archivio di ricordi</h1>
+        <p class="hero-text text text-size-200">Un progetto digitale nato per raccogliere e valorizzare ricordi familiari attraverso fotografie e storie.</p>
         <div class="button-group">
-          <a href="#storia" class="button button-primary">Leggi la storia</a>
-          <a href="#elaborati" class="button button-secondary">Esplora gli elaborati</a>
+          <a href="#concept" class="button button-primary">concept</a>
+          <a href="#prototipi" class="button button-secondary">prototipi</a>
         </div>
         <img class="hero-image" src="assets/images/display.png" alt="screenshot desktop della home di sentcell">
         
       </div>
     </section>
-    <!-- Destinazioni provvisorie dei link, da completare/sostituire in base al vostro case study -->
-    <div class="chapters container" id="storia">
-      <section id="concept"><h2 class="heading">Concept</h2><a href="#top">Torna all’inizio</a></section>
-      <section id="sitemap"><h2 class="heading">Sitemap</h2><a href="#top">Torna all’inizio</a></section>
-      <section id="assets"><h2 class="heading">Assets</h2><a href="#top">Torna all’inizio</a></section>
-      <section id="prototipi"><h2 class="heading" id="elaborati">Prototipi</h2><a href="#top">Torna all’inizio</a></section>
-      <section id="highlights"><h2 class="heading">Highlights</h2><a href="#top">Torna all’inizio</a></section>
-    </div>
+
+
+    <section class="info-group container border-bottom" id="info">
+        <div class="container padding-24">
+          <span class="info text"> Studente</span>
+          <p class="informazione text text-size-200"> Alessandro Vincenzi</p>
+        </div>
+        <div class="container padding-24">
+          <span class="info text"> Corso</span>
+          <p class="informazione text text-size-200"> ITS Web Design e Strategie Digitali</p>
+        </div>
+        <div class="container padding-24">
+          <span class="info text"> Modulo</span>
+          <p class="informazione text text-size-200"> UI/UX Design</p>
+        </div>
+        <div class="container padding-24">
+          <span class="info text"> Scuola e anno</span>
+          <p class="informazione text text-size-200"> ITS Accademy I-CREA, CFP Bauer Milano. 2026/2027</p>
+        </div>
+    </section>
+
+    <!-- Ogni sezione del case study deve avere l'id della voce di menu corrispondente:
+     concept, sitemap, assets, prototipi, highlights. 
+     Un link href="#assets" porta all’elemento con id="assets". 
+     Quando costruirai le sezioni vere del case study, ognuna dovrà avere l’id della sua voce di menu, 
+     scritto con le stesse lettere. Fino ad allora i link del menu non portano da nessuna parte, 
+     e il menu mobile resta aperto quando scegli una voce: 
+     il codice della lezione 02 lo chiude solo se la destinazione esiste.-->
+
+    <section class="theme-light" id="questa-pagina">
+     <header class="container border-inline">
+      <div class="case-study-intro padding-64">
+      <p class="eyebrow"> dal progetto al case study
+        <svg class="eyebrow-cursor" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="8" height="10" fill="#5FED83"/>
+        </svg></p>
+      <h2 class="heading heading-size-4">Anche questa pagina è un progetto</h2> 
+      <p class="text paragraph"> Per raccontare Radici ho progettato una seconda interfaccia: questo case study.
+        Ho studiato Primer Brand e combinato i suoi componenti per dare una forma coerente al racconto.</p>
+    </div> 
+    </header>
+   </section>
+ 
   </main>
   <footer></footer>
 </body>
+</html>
