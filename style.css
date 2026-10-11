@@ -36,6 +36,7 @@ img {
     --color-cursor: #ff3c00;
     --color-button-primary-bg: #08872B;
     --icon-size: 1.25em;
+    --breakdownTabs-title-gap: 1.5em;
     --icon-color: #08872B;
     --color-button-secondary-bg: rgba(255, 255, 255, 0.12);
     --color-button-secondary-border: rgba(255, 255, 255, 0.06);
@@ -58,6 +59,7 @@ img {
     --font-weight-medium: 500;
     --font-weight-semibold: 550;
     --border-width: 1px;
+    --border-selected-scale: 2;
     --focus-outline-width: 0.25em;
     --focus-outline-offset: 0.125em;
     --radius-control: 0.375em;
@@ -643,4 +645,61 @@ body {
 .breakdownTabs:has(#breakdownTabs-item-check.is-selected)
 .breakdownTabs-visual-check {
     display: block;
+}
+
+.breakdownTabs-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breakdownTabs-button {
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.breakdownTabs-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: var(--breakdownTabs-title-gap);
+}
+
+.breakdownTabs-item {
+    position: relative;
+    border-bottom: var(--border-width) solid var(--color-border-muted);
+}
+
+.breakdownTabs-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--border-width);
+    background: var(--color-border-muted);
+    transform-origin: top;
+}
+
+.breakdownTabs-item.is-selected::before {
+    background: var(--brand-color-accent-primary);
+    transform: scaleY(var(--border-selected-scale));
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .breakdownTabs-item:hover::before {
+        background: var(--brand-color-accent-primary);
+        transform: scaleY(var(--border-selected-scale));
+    }
 }
