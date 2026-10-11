@@ -1,7 +1,7 @@
 const navigationButton = document.querySelector('.navigation-toggle');
 const navigationLabel = document.querySelector('.navigation-label');
 const navigationPanel = document.querySelector('.navigation-panel');
-const desktopMedia = window.matchMedia('(min-width: 63.25rem)');
+const desktopMedia = window.matchMedia('(min-width: 1000px)');
 const supportsNavigation = 'popover' in HTMLElement.prototype &&
   CSS.supports('top', 'anchor(bottom)') &&
   CSS.supports('width', 'anchor-size(width)');

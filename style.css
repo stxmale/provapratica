@@ -62,7 +62,7 @@ img {
     --brand-color-text-default: #000000;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1000px) {
     :root {
         --heading-1-font-size: 36px;
     }
@@ -423,7 +423,7 @@ body {
 }
 
 /* Su tablet cambia il layout, ma il popover resta attivo */
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
     .navigation {
         --navigation-height: 4em;
         --navigation-title-font-size: 1em;
