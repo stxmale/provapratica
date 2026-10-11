@@ -624,3 +624,23 @@ body {
     fill: currentColor;
     flex-shrink: 0;
 }
+.breakdownTabs-visual {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.breakdownTabs:has(#breakdownTabs-item-study.is-selected)
+.breakdownTabs-visual-study {
+    display: block;
+}
+
+.breakdownTabs:has(#breakdownTabs-item-layout.is-selected)
+.breakdownTabs-visual-layout {
+    display: block;
+}
+
+.breakdownTabs:has(#breakdownTabs-item-check.is-selected)
+.breakdownTabs-visual-check {
+    display: block;
+}
