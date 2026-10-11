@@ -587,3 +587,10 @@ body {
 .padding-24 {
     padding: var(--spacing-24);
 }
+.border-top {
+    border-top: var(--border-width) solid var(--color-border-muted-fixed);
+}
+
+.color-muted {
+    color: var(--color-muted);
+}
