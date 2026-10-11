@@ -45,6 +45,10 @@ img {
     --heading-1-line-height: 1.1;
     --eyebrow-font-size: 14px;
     --heading-font-size-4:34px;
+    --text-350-font-size: 1.25em;
+    --text-350-line-height: 1.3;  
+    --heading-4-font-weight: 400;
+    --heading-4-line-height: 1.3;
     --text-200-font-size: 16px;
     --text-200-line-height: 1.5;
     --text-100-font-size: 0.875em;
@@ -125,6 +129,12 @@ body {
 .text-size-200 {
     font-size: var(--text-200-font-size);
     line-height: var(--text-200-line-height);
+}
+
+.text-size-350 {
+    font-size: var(--text-350-font-size);
+    line-height: var(--text-350-line-height);
+    letter-spacing: 0.015em;
 }
 
 .hero-text {
@@ -483,7 +493,7 @@ body {
         --navigation-inline-link-padding: 0 0.25em;
         --navigation-inline-label-padding: 0.25em 0.75em;
     }
-}
+
     .navigation-content {
         flex-wrap: nowrap;
         height: calc(var(--navigation-height) - var(--border-width));
@@ -525,6 +535,7 @@ body {
         outline: var(--focus-outline-width) solid var(--color-focus);
         outline-offset: var(--focus-outline-offset);
     }
+}
 
 .info-group {
     display: flex;
@@ -548,7 +559,10 @@ body {
 
 .heading-size-4 {
     font-size: var(--heading-font-size-4);
-    line-height: 1.3;
+    font-weight: var(--heading-4-font-weight);
+    line-height: var(--heading-4-line-height);
+    /*rende equilibrate le scritte quando il titolo va a capo, figo!)*/
+    text-wrap: balance;  
 }
  
 .theme-light {
