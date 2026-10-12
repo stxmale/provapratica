@@ -1,30 +1,38 @@
-
+/* Regole di base: elimina gli spazi iniziali e include i bordi nelle dimensioni */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+
+/* Immagini: si restringono per restare nel contenitore */
 img {
     display: inline-block;
     max-width: 100%;
 }
 
+
+/* Caratteri: carica i font salvati nella cartella assets/fonts */
 @font-face {
-  font-family: "Mona Sans";
-  src: url("assets/fonts/mona-sans.woff2") format("woff2");
-  font-weight: 200 900;
-  font-display: swap;
-  font-feature-settings: "liga" 0;
-}
-@font-face {
-  font-family: "Mona Sans Mono";
-  src: url("assets/fonts/mona-sans-mono.woff2") format("woff2");
-  font-weight: 200 900;
-  font-display: swap;
-  font-feature-settings: "liga" 0;
+    font-family: "Mona Sans";
+    src: url("assets/fonts/mona-sans.woff2") format("woff2");
+    font-weight: 200 900;
+    font-display: swap;
+    font-feature-settings: "liga" 0;
 }
 
+/* Caratteri: carica i font salvati nella cartella assets/fonts */
+@font-face {
+    font-family: "Mona Sans Mono";
+    src: url("assets/fonts/mona-sans-mono.woff2") format("woff2");
+    font-weight: 200 900;
+    font-display: swap;
+    font-feature-settings: "liga" 0;
+}
+
+
+/* Variabili comuni: colori, caratteri, dimensioni e distanze da riutilizzare */
 :root {
     --font-body: "Mona Sans";
     --font-mono: "Mona Sans Mono";
@@ -32,7 +40,7 @@ img {
     --color-white: #fff;
     --color-muted: #A4AEA6;
     --color-border-muted: #191F1B;
-    --color-border-muted-fixed:#E4EBE6;
+    --color-border-muted-fixed: #E4EBE6;
     --color-cursor: #ff3c00;
     --color-button-primary-bg: #08872B;
     --icon-size: 1.25em;
@@ -44,7 +52,7 @@ img {
     --icon-color: #08872B;
     --color-button-secondary-bg: rgba(255, 255, 255, 0.12);
     --color-button-secondary-border: rgba(255, 255, 255, 0.06);
-    --color-focus: #ff3c00;     
+    --color-focus: #ff3c00;
     --container-width: 1280px;
     --spacing-80: 80px;
     --spacing-64: 64px;
@@ -56,9 +64,9 @@ img {
     --heading-1-font-size: 56px;
     --heading-1-line-height: 1.1;
     --eyebrow-font-size: 14px;
-    --heading-font-size-4:34px;
+    --heading-font-size-4: 34px;
     --text-350-font-size: 1.25em;
-    --text-350-line-height: 1.3;  
+    --text-350-line-height: 1.3;
     --heading-4-font-weight: 400;
     --heading-4-line-height: 1.3;
     --text-200-font-size: 16px;
@@ -79,6 +87,8 @@ img {
     --brand-color-text-default: #000000;
     --brand-color-accent-primary: #0D6731;
 }
+
+/* Schermi stretti: riduce i caratteri fino a 640px */
 @media (max-width: 640px) {
     :root {
         --heading-1-font-size: 36px;
@@ -87,11 +97,15 @@ img {
     }
 }
 
+
+/* Pagina: imposta il carattere principale */
 body {
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
 }
 
+
+/* Hero: colori e misure della prima sezione */
 .hero {
     --hero-text-max-width: 600px;
     --hero-content-gap: 1em;
@@ -99,12 +113,16 @@ body {
     text-align: center;
 }
 
+
+/* Contenitore comune: limita la larghezza e centra il blocco */
 .container {
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
 }
 
+
+/* Hero: dispone i contenuti in colonna e aggiunge lo sfondo */
 .hero-content {
     padding: var(--spacing-64);
     border-left: 1px solid var(--color-border-muted);
@@ -116,6 +134,8 @@ body {
     background-image: url(assets/images/sfondo\ hero.png);
 }
 
+
+/* Etichetta sopra il titolo: testo piccolo e cursore affiancato */
 .eyebrow {
     font-size: var(--eyebrow-font-size);
     font-family: var(--font-mono);
@@ -128,42 +148,60 @@ body {
     gap: 0.42em;
 }
 
+
+/* Cursore decorativo: prende il colore dalla variabile del tema */
 .eyebrow-cursor rect {
     fill: var(--color-cursor);
 }
 
+
+/* Titoli: peso del carattere comune */
 .heading {
     font-weight: 400;
 }
 
+
+/* Titolo grande della hero */
 .heading-size-1 {
     font-size: var(--heading-1-font-size);
     line-height: var(--heading-1-line-height);
 }
 
+
+/* Testo dei paragrafi: dimensione e distanza fra le righe */
 .text-size-200 {
     font-size: var(--text-200-font-size);
     line-height: var(--text-200-line-height);
 }
 
+
+/* Testo dei titoli delle voci del case study */
 .text-size-350 {
     font-size: var(--text-350-font-size);
     line-height: var(--text-350-line-height);
 }
 
+
+/* Hero: larghezza massima del paragrafo */
 .hero-text {
     max-width: var(--hero-text-max-width);
 }
 
+
+/* Gruppo di pulsanti: li affianca e li separa */
 .button-group {
     display: flex;
     gap: 1em;
 }
 
+
+/* Hero: spazio sopra la sua immagine */
 .hero-image {
     margin-top: calc(64px - var(--hero-content-gap));
 }
 
+
+/* Pulsanti comuni: bordi, spazi interni e forma */
 .button {
     text-decoration: none;
     color: inherit;
@@ -175,33 +213,47 @@ body {
     transition: background-color 300ms ease-in-out;
 }
 
+
+/* Pulsante principale: fondo verde */
 .button-primary {
     background-color: var(--color-button-primary-bg);
     border-color: transparent;
 }
 
+
+/* Pulsante principale: colore al passaggio del mouse */
 .button-primary:hover {
-    background-color: color-mix(in srgb, var(--color-button-primary-bg),#000 16%);
+    background-color: color-mix(in srgb, var(--color-button-primary-bg), #000 16%);
 }
 
+
+/* Pulsante secondario: fondo e bordo */
 .button-secondary {
-     background-color: var(--color-button-secondary-bg);
-     border-color: var(--color-button-secondary-border);
+    background-color: var(--color-button-secondary-bg);
+    border-color: var(--color-button-secondary-border);
 }
 
+
+/* Pulsante secondario: colore al passaggio del mouse */
 .button-secondary:hover {
-    background-color: color-mix(in srgb, var(--color-button-secondary-bg),#fff 6%);
+    background-color: color-mix(in srgb, var(--color-button-secondary-bg), #fff 6%);
 }
 
+
+/* Pulsanti: contorno quando li raggiungi con la tastiera */
 .button:focus-visible {
     outline: 4px solid var(--color-focus);
     outline-offset: 2px;
 }
 
+
+/* Elementi nascosti: mantiene nascosti quelli con attributo hidden */
 [hidden] {
     display: none !important;
 }
 
+
+/* Vai al contenuto: collegamento nascosto fino al focus */
 .skip-link {
     --skip-link-offset-inline: 1em;
     --skip-link-offset-block: 0.5em;
@@ -218,12 +270,16 @@ body {
     transform: translateY(calc(-100% - var(--skip-link-offset-block)));
 }
 
+
+/* Vai al contenuto: compare quando lo raggiungi con la tastiera */
 .skip-link:focus {
     transform: none;
     outline: var(--focus-outline-width) solid var(--color-focus);
     outline-offset: var(--focus-outline-offset);
 }
 
+
+/* Navigazione: variabili del menu, colori e bordo inferiore */
 .navigation {
     --navigation-height: 3.5em;
     --navigation-logo-size: 1.5em;
@@ -256,15 +312,22 @@ body {
     border-bottom: var(--border-width) solid var(--color-border-muted);
 }
 
+
+/* Menu: i collegamenti ereditano il colore */
 .navigation a {
     color: inherit;
 }
 
-.navigation a:focus-visible, .navigation button:focus-visible {
+
+/* Menu: contorno dei collegamenti e pulsanti raggiunti da tastiera */
+.navigation a:focus-visible,
+.navigation button:focus-visible {
     outline: var(--focus-outline-width) solid var(--color-focus);
     outline-offset: var(--focus-outline-offset);
 }
 
+
+/* Menu: linea colorata sotto la navigazione */
 .navigation::after {
     content: "";
     position: absolute;
@@ -276,11 +339,15 @@ body {
     pointer-events: none;
 }
 
+
+/* Menu: disposizione dei contenuti */
 .navigation-content {
     display: flex;
     flex-wrap: wrap;
 }
 
+
+/* Menu: allinea logo e nome del sito */
 .navigation-brand {
     display: flex;
     align-items: center;
@@ -288,6 +355,8 @@ body {
     flex-shrink: 0;
 }
 
+
+/* Logo: posizione e spazi laterali */
 .navigation-logo {
     display: flex;
     position: relative;
@@ -295,12 +364,16 @@ body {
     margin-right: var(--navigation-logo-margin-end);
 }
 
+
+/* Logo: dimensioni della sua immagine */
 .navigation-logo img {
     display: block;
     width: var(--navigation-logo-size);
     height: var(--navigation-logo-size);
 }
 
+
+/* Logo: freccia inizialmente invisibile */
 .navigation-back-arrow {
     position: absolute;
     top: 50%;
@@ -312,10 +385,14 @@ body {
     line-height: var(--navigation-back-arrow-line-height);
 }
 
+
+/* Logo: mostra la freccia al passaggio del mouse */
 .navigation-logo:hover .navigation-back-arrow {
     opacity: 1;
 }
 
+
+/* Nome del sito nella navigazione */
 .navigation-title {
     text-decoration: none;
     font-size: var(--navigation-title-font-size);
@@ -323,20 +400,28 @@ body {
     line-height: var(--navigation-title-line-height);
 }
 
+
+/* Nome del sito: colore del testo secondario */
 .navigation-title span {
     color: var(--color-muted);
 }
 
+
+/* Contenitore delle voci del menu */
 .navigation-menu {
     width: 100%;
 }
 
+
+/* Lista del menu: elimina pallini e spazi iniziali */
 .navigation-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+
+/* Voci del menu: allineamento, testo e area del collegamento */
 .navigation-list a {
     display: flex;
     align-items: center;
@@ -346,25 +431,35 @@ body {
     text-decoration: none;
 }
 
+
+/* Voci del menu: colore al passaggio del mouse */
 .navigation-list a:hover {
     color: var(--color-white);
 }
 
-/* Il layout "compatto" dipende se l'attributo popover è presente (su desktop viene rimosso via JS) */
+
+
+/* Menu compatto: altezza quando il pannello a comparsa è attivo */
 .navigation:has(.navigation-panel[popover]) {
     height: var(--navigation-height);
 }
 
+
+/* Menu compatto: mantiene il contenuto su una riga */
 .navigation:has(.navigation-panel[popover]) .navigation-content {
     height: 100%;
     flex-wrap: nowrap;
 }
 
+
+/* Menu compatto: porta il pulsante a destra */
 .navigation-menu:has(.navigation-panel[popover]) {
     width: auto;
     margin-left: auto;
 }
 
+
+/* Pulsante del menu: apre il pannello a comparsa */
 .navigation-toggle {
     anchor-name: --navigation-toggle;
     display: flex;
@@ -383,6 +478,8 @@ body {
     color: var(--color-white);
 }
 
+
+/* Icone del menu: dimensioni comuni */
 .navigation-icon {
     display: block;
     width: var(--navigation-icon-size);
@@ -390,14 +487,20 @@ body {
     flex-shrink: 0;
 }
 
+
+/* Icona di chiusura: nascosta quando il menu è chiuso */
 .navigation-icon-close {
     display: none;
 }
 
+
+/* Etichetta del pulsante menu: nascosta sugli schermi piccoli */
 .navigation-label {
     display: none;
 }
 
+
+/* Pannello a comparsa: posizione, sfondo e scorrimento */
 .navigation-panel[popover] {
     position: fixed;
     position-anchor: --navigation-toggle;
@@ -414,31 +517,43 @@ body {
     overflow-y: auto;
 }
 
+
+/* Menu aperto: cambia il fondo del pulsante */
 .navigation-menu:has(:popover-open) .navigation-toggle {
     background: var(--navigation-toggle-open-background);
 }
 
+
+/* Menu aperto: nasconde l’icona di apertura */
 .navigation-menu:has(:popover-open) .navigation-icon-open {
     display: none;
 }
 
+
+/* Menu aperto: mostra l’icona di chiusura */
 .navigation-menu:has(:popover-open) .navigation-icon-close {
     display: block;
 }
 
+
+/* Pulsante menu: disegna il contorno verso l’interno */
 .navigation-toggle:focus-visible {
     outline-offset: calc(-1 * var(--focus-outline-offset));
 }
 
+
+/* Menu: animazione solo se l’utente non richiede movimenti ridotti */
 @media (prefers-reduced-motion: no-preference) {
     .navigation-panel:popover-open {
         animation: reveal var(--navigation-reveal-duration) var(--navigation-reveal-easing);
     }
+
     @keyframes reveal {
         from {
             opacity: 0;
             transform: translateY(var(--navigation-reveal-offset));
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -446,7 +561,9 @@ body {
     }
 }
 
-/* Su tablet cambia il layout, ma il popover resta attivo */
+
+
+/* Menu da 768px: adatta misure ed etichetta, mantenendo il pannello a comparsa */
 @media (min-width: 768px) {
     .navigation {
         --navigation-height: 4em;
@@ -460,13 +577,16 @@ body {
         --navigation-link-min-height: 2.5em;
         --navigation-link-padding: 0.5em 0.75em;
     }
+
     .navigation-brand {
         padding-right: var(--navigation-brand-padding-end);
         border-right: var(--border-width) solid var(--color-border-muted);
     }
+
     .navigation-menu:has(.navigation-panel[popover]) {
         position: relative;
     }
+
     .navigation-toggle {
         width: max-content;
         min-width: var(--navigation-toggle-min-width);
@@ -474,10 +594,12 @@ body {
         border-right: var(--border-width) solid var(--color-border-muted);
         font-weight: var(--font-weight-semibold);
     }
+
     .navigation-label {
         display: inline;
         white-space: nowrap;
     }
+
     .navigation-panel[popover] {
         left: auto;
         right: anchor(right);
@@ -485,22 +607,28 @@ body {
         border: var(--border-width) solid var(--color-border-muted);
         border-top: 0;
     }
+
     .navigation-list {
         display: grid;
         gap: var(--navigation-list-gap);
         padding: var(--navigation-list-padding);
     }
+
     .navigation-list a {
         min-height: var(--navigation-link-min-height);
         color: var(--color-muted);
         border-radius: var(--radius-control);
     }
-    .navigation-list a:hover, .navigation-list a:focus-visible {
+
+    .navigation-list a:hover,
+    .navigation-list a:focus-visible {
         background: var(--navigation-link-hover-background);
     }
 }
 
-/* Su desktop JS rimuove popover e gli elementi si dispongono in linea */
+
+
+/* Menu desktop da 1000px: dispone i collegamenti in linea */
 @media (min-width: 1000px) {
     .navigation {
         --navigation-inline-list-padding: 0 0 0 1em;
@@ -512,73 +640,95 @@ body {
         flex-wrap: nowrap;
         height: calc(var(--navigation-height) - var(--border-width));
     }
+
     .navigation-menu:has(.navigation-panel:not([popover])) {
         width: auto;
         margin-left: 0;
     }
+
     .navigation-panel:not([popover]) {
         position: static;
         height: 100%;
         border: 0;
         overflow: visible;
     }
+
     .navigation-panel:not([popover]) .navigation-list {
         display: flex;
         height: 100%;
         gap: 0;
         padding: var(--navigation-inline-list-padding);
     }
+
     .navigation-panel:not([popover]) .navigation-list a {
         height: 100%;
         padding: var(--navigation-inline-link-padding);
     }
+
     .navigation-panel:not([popover]) .navigation-list a span {
         padding: var(--navigation-inline-label-padding);
         border-radius: var(--radius-pill);
     }
-    .navigation-panel:not([popover]) .navigation-list a:hover, .navigation-panel:not([popover]) .navigation-list a:focus-visible {
+
+    .navigation-panel:not([popover]) .navigation-list a:hover,
+    .navigation-panel:not([popover]) .navigation-list a:focus-visible {
         background: transparent;
     }
+
     .navigation-panel:not([popover]) .navigation-list a:hover span {
         background: var(--navigation-link-hover-background);
     }
+
     .navigation-panel:not([popover]) .navigation-list a:focus-visible {
         outline: none;
     }
+
     .navigation-panel:not([popover]) .navigation-list a:focus-visible span {
         outline: var(--focus-outline-width) solid var(--color-focus);
         outline-offset: var(--focus-outline-offset);
     }
 }
 
+
+/* Dati del corso: disposizione del gruppo */
 .info-group {
     display: flex;
-    
+
     align-self: stretch;
 }
 
+
+/* Dati del corso: colore delle etichette */
 .info {
- color: var(--brand-color-text-muted);
- 
+    color: var(--brand-color-text-muted);
+
 }
 
-.informazione{
- color: var(--brand-color-text-default);
- font-weight: var(--font-weight-semibold);
+
+/* Dati del corso: colore e peso delle informazioni */
+.informazione {
+    color: var(--brand-color-text-default);
+    font-weight: var(--font-weight-semibold);
 }
 
+
+/* Paragrafo: limite di larghezza quando la variabile è disponibile */
 .paragraph {
     max-width: var(--hero-text-max-width);
 }
 
+
+/* Titolo della sezione: dimensione, peso e righe equilibrate */
 .heading-size-4 {
     font-size: var(--heading-font-size-4);
     font-weight: var(--heading-4-font-weight);
     line-height: var(--heading-4-line-height);
-    /*rende equilibrate le scritte quando il titolo va a capo, figo!)*/
-    text-wrap: balance;  
+
+    text-wrap: balance;
 }
- 
+
+
+/* Tema chiaro: colori ereditati dagli elementi della sezione bianca */
 .theme-light {
     --color-muted: #58635B;
     --color-border-muted: var(--color-border-muted-fixed);
@@ -587,26 +737,36 @@ body {
     background: var(--color-white);
     color: var(--color-black);
 }
+
+/* Tema scuro: testo chiaro e fondo nero */
 .theme-dark {
-    --color-muted:#A4AEA6;
+    --color-muted: #A4AEA6;
     background: var(--color-black);
     color: var(--color-white);
 }
 
+
+/* Bordi comuni: linee a sinistra e a destra */
 .border-inline {
     border-left: var(--border-width) solid var(--color-border-muted);
     border-right: var(--border-width) solid var(--color-border-muted);
 }
- 
+
+
+/* Bordi comuni: linea superiore */
 .border-top {
     border-top: var(--border-width) solid var(--color-border-muted);
 }
+
+/* Bordi comuni: linee sopra e sotto */
 .border-block {
     border-block: var(--border-width) solid var(--color-border-muted);
 }
 
+
+/* Introduzione del case study: centra etichetta, titolo e paragrafo */
 .case-study-intro {
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -615,20 +775,28 @@ body {
     margin-left: auto;
     margin-right: auto;
     gap: 1em;
-    
+
 }
 
+
+/* Spazio interno comune: usa la variabile da 64px */
 .padding-64 {
     padding: var(--spacing-64);
 }
+
+/* Spazio interno comune: usa la variabile da 24px */
 .padding-24 {
     padding: var(--spacing-24);
 }
 
+
+/* Testo secondario: usa il colore del tema */
 .color-muted {
     color: var(--color-muted);
 }
 
+
+/* Icone SVG: dimensioni e colore gestiti dal CSS */
 .icon {
     width: var(--icon-size);
     height: var(--icon-size);
@@ -636,33 +804,42 @@ body {
     fill: currentColor;
     flex-shrink: 0;
 }
+
+/* Immagini del case study: nascoste finché non corrispondono alla voce scelta */
 .breakdownTabs-visual {
     display: none;
     width: 100%;
     height: auto;
 }
 
-.breakdownTabs:has(#breakdownTabs-item-study.is-selected)
-.breakdownTabs-visual-study {
+
+/* Immagine del case study: mostra Studiare il sistema quando è selezionato */
+.breakdownTabs:has(#breakdownTabs-item-study.is-selected) .breakdownTabs-visual-study {
     display: block;
 }
 
-.breakdownTabs:has(#breakdownTabs-item-layout.is-selected)
-.breakdownTabs-visual-layout {
+
+/* Immagine del case study: mostra Comporre la pagina quando è selezionato */
+.breakdownTabs:has(#breakdownTabs-item-layout.is-selected) .breakdownTabs-visual-layout {
     display: block;
 }
 
-.breakdownTabs:has(#breakdownTabs-item-check.is-selected)
-.breakdownTabs-visual-check {
+
+/* Immagine del case study: mostra Verificare il risultato quando è selezionato */
+.breakdownTabs:has(#breakdownTabs-item-check.is-selected) .breakdownTabs-visual-check {
     display: block;
 }
 
+
+/* Lista del case study: elimina pallini e spazi iniziali */
 .breakdownTabs-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+
+/* Pulsante della voce: icona sopra il titolo, con spazi presi dalle variabili */
 .breakdownTabs-button {
     border: 0;
     background: none;
@@ -679,6 +856,8 @@ body {
     gap: var(--breakdownTabs-button-gap);
 }
 
+
+/* Riga del titolo: titolo a sinistra e triangolo a destra */
 .breakdownTabs-title {
     display: flex;
     justify-content: space-between;
@@ -687,11 +866,15 @@ body {
     gap: var(--breakdownTabs-title-gap);
 }
 
+
+/* Voce del case study: riferimento per le linee e bordo inferiore */
 .breakdownTabs-item {
     position: relative;
     border-bottom: var(--border-width) solid var(--color-border-muted);
 }
 
+
+/* Voce del case study: crea la linea superiore */
 .breakdownTabs-item::before {
     content: "";
     position: absolute;
@@ -703,50 +886,66 @@ body {
     transform-origin: top;
 }
 
+
+/* Voce scelta: linea superiore verde e più spessa */
 .breakdownTabs-item.is-selected::before {
     background: var(--brand-color-accent-primary);
     transform: scaleY(var(--border-selected-scale));
 }
 
+
+/* Voci del case study: evidenzia la linea al passaggio del mouse */
 @media (hover: hover) and (pointer: fine) {
     .breakdownTabs-item:hover::before {
         background: var(--brand-color-accent-primary);
         transform: scaleY(var(--border-selected-scale));
-        
+
     }
 }
 
-/*triangoli cambiano alla selezione*/
 
+
+
+/* Triangoli: rivolti in basso e nascosti finché JavaScript non è pronto */
 .breakdownTabs-toggle {
     --icon-size: var(--breakdownTabs-toggle-size);
     transform: rotate(180deg);
     display: none;
 }
 
+
+/* Voce scelta: triangolo rivolto in alto */
 .breakdownTabs-item.is-selected .breakdownTabs-toggle {
     transform: rotate(0deg);
 }
-/* Il contorno di focus circonda tutta la voce */
+
+
+/* Tastiera: toglie il contorno dal solo pulsante */
 .breakdownTabs-button:focus-visible {
     outline: none;
 }
 
+
+/* Tastiera: disegna il contorno intorno all’intera voce */
 .breakdownTabs-item:has(.breakdownTabs-button:focus-visible) {
     outline: var(--focus-outline-width) solid var(--color-focus);
     outline-offset: var(--focus-outline-offset);
 }
 
-/* Queste regole si attivano quando JavaScript è pronto */
-.breakdownTabs-ready
-.breakdownTabs-item:not(.is-selected)
-.breakdownTabs-text {
+
+
+/* JavaScript pronto: nasconde i paragrafi delle voci non scelte sul mobile */
+.breakdownTabs-ready .breakdownTabs-item:not(.is-selected) .breakdownTabs-text {
     display: none;
 }
 
+
+/* JavaScript pronto: mostra i triangoli dell’accordion */
 .breakdownTabs-ready .breakdownTabs-toggle {
     display: block;
 }
+
+/* Schede desktop da 1000px: tre colonne, testi visibili e triangoli nascosti */
 @media (min-width: 1000px) {
     .breakdownTabs-list {
         display: grid;
@@ -763,9 +962,7 @@ body {
         color: var(--color-black);
     }
 
-    .breakdownTabs-ready
-    .breakdownTabs-item:not(.is-selected)
-    .breakdownTabs-text {
+    .breakdownTabs-ready .breakdownTabs-item:not(.is-selected) .breakdownTabs-text {
         display: block;
     }
 
@@ -773,24 +970,27 @@ body {
     .breakdownTabs-ready .breakdownTabs-toggle {
         display: none;
     }
+
     .breakdownTabs-content {
-    padding: var(--spacing-64) var(--spacing-64) var(--spacing-80);
+        padding: var(--spacing-64) var(--spacing-64) var(--spacing-80);
     }
+
     .breakdownTabs-button::after {
-    content: "";
-    position: absolute;
-    inset: 0;
+        content: "";
+        position: absolute;
+        inset: 0;
     }
-    /*Il pulsante crea un’area trasparente che copre tutta la voce.
-    Funziona perché .breakdownTabs-item ha già position: relative.*/
+
     .breakdownTabs {
-    --breakdownTabs-button-padding: var(--spacing-28) 0 0;
-    --breakdownTabs-button-gap: var(--brand-Card-padding-inline);
-}
-.breakdownTabs-text {
-    margin-top: var(--breakdownTabs-text-gap-desktop);
-}
-.breakdownTabs-visuals {
-    margin-bottom: var(--spacing-36);
-}
+        --breakdownTabs-button-padding: var(--spacing-28) 0 0;
+        --breakdownTabs-button-gap: var(--brand-Card-padding-inline);
+    }
+
+    .breakdownTabs-text {
+        margin-top: var(--breakdownTabs-text-gap-desktop);
+    }
+
+    .breakdownTabs-visuals {
+        margin-bottom: var(--spacing-36);
+    }
 }

@@ -1,9 +1,12 @@
+Copia questo blocco completo in **`index.html`**, sostituendo il contenuto attuale. Ho aggiunto i commenti per dividere le sezioni e sistemato l’indentazione, mantenendo contenuti e struttura.
+
+```html
 <!DOCTYPE html>
-<html lang='it'>
+<html lang="it">
 
+<!-- ===== INFORMAZIONI DELLA PAGINA E FILE COLLEGATI ===== -->
 <head>
-
-  <meta charset='utf-8' />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Prova Pratica Alessandro Vincenzi</title>
   <link rel="stylesheet" href="style.css">
@@ -12,25 +15,58 @@
 
 <body>
 
+  <!-- ===== COLLEGAMENTO PER SALTARE AL CONTENUTO ===== -->
   <a class="skip-link" href="#top">Vai al contenuto</a>
+
+  <!-- ===== NAVIGAZIONE: LOGO E MENU DEI CAPITOLI ===== -->
   <header class="navigation">
     <div class="navigation-content">
+
+      <!-- Logo e nome del sito -->
       <div class="navigation-brand">
-        <a class="navigation-logo" href="https://github.com/education" aria-label="GitHub Education">
+        <a class="navigation-logo"
+           href="https://github.com/education"
+           aria-label="GitHub Education">
           <span class="navigation-back-arrow" aria-hidden="true"></span>
-          <img src="assets/images/github-mark.svg" width="24" height="24" alt="" />
+          <img src="assets/images/github-mark.svg"
+               width="24"
+               height="24"
+               alt="" />
         </a>
-        <a class="navigation-title" href="#top">GitHub <span>Student Stories</span></a>
+
+        <a class="navigation-title" href="#top">
+          GitHub <span>Student Stories</span>
+        </a>
       </div>
+
+      <!-- Pulsante di apertura e pannello del menu -->
       <div class="navigation-menu">
-        <button class="navigation-toggle" type="button" aria-label="Menu dei capitoli" popovertarget="navigation-panel">
-          <img class="navigation-icon navigation-icon-open" src="assets/images/menu.svg" width="16" height="16" alt=""
-            aria-hidden="true" />
-          <img class="navigation-icon navigation-icon-close" src="assets/images/close.svg" width="16" height="16" alt=""
-            aria-hidden="true" />
+        <button class="navigation-toggle"
+                type="button"
+                aria-label="Menu dei capitoli"
+                popovertarget="navigation-panel">
+          <img class="navigation-icon navigation-icon-open"
+               src="assets/images/menu.svg"
+               width="16"
+               height="16"
+               alt=""
+               aria-hidden="true" />
+
+          <img class="navigation-icon navigation-icon-close"
+               src="assets/images/close.svg"
+               width="16"
+               height="16"
+               alt=""
+               aria-hidden="true" />
+
           <span class="navigation-label">Menu dei capitoli</span>
         </button>
-        <nav id="navigation-panel" class="navigation-panel" popover="auto" aria-label="Capitoli della storia">
+
+        <!-- Collegamenti alle sezioni del progetto -->
+        <nav id="navigation-panel"
+             class="navigation-panel"
+             popover="auto"
+             aria-label="Capitoli della storia">
           <ul class="navigation-list">
             <li><a href="#concept"><span>Concept</span></a></li>
             <li><a href="#sitemap"><span>Sitemap</span></a></li>
@@ -40,217 +76,311 @@
           </ul>
         </nav>
       </div>
+
     </div>
   </header>
+
+  <!-- ===== CONTENUTO PRINCIPALE ===== -->
   <main id="top" tabindex="-1">
+
+    <!-- ===== HERO: PRESENTAZIONE DEL PROGETTO ===== -->
     <section class="hero">
       <div class="hero-content container">
 
+        <!-- Etichetta con nome, corso, anno e cursore decorativo -->
         <p class="eyebrow">
           ALESSANDRO VINCENZI · UI/UX Design · 2026/2027
-          <svg class="eyebrow-cursor" width="8" height="10" viewBox="0 0 8 10" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+          <svg class="eyebrow-cursor"
+               width="8"
+               height="10"
+               viewBox="0 0 8 10"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg">
             <rect width="8" height="10" fill="#5FED83" />
           </svg>
         </p>
-        <h1 class="heading heading-size-1">Radici.<br>Un archivio di ricordi</h1>
-        <p class="hero-text text text-size-200">Un progetto digitale nato per raccogliere e valorizzare ricordi
-          familiari attraverso fotografie e storie.</p>
+
+        <!-- Titolo principale e breve descrizione -->
+        <h1 class="heading heading-size-1">
+          Radici.<br>Un archivio di ricordi
+        </h1>
+
+        <p class="hero-text text text-size-200">
+          Un progetto digitale nato per raccogliere e valorizzare ricordi
+          familiari attraverso fotografie e storie.
+        </p>
+
+        <!-- Collegamenti a Concept e Prototipi -->
         <div class="button-group">
           <a href="#concept" class="button button-primary">concept</a>
           <a href="#prototipi" class="button button-secondary">prototipi</a>
         </div>
-        <img class="hero-image" src="assets/images/display.png" alt="screenshot desktop della home di sentcell">
+
+        <!-- Immagine di presentazione del progetto -->
+        <img class="hero-image"
+             src="assets/images/display.png"
+             alt="screenshot desktop della home di sentcell">
 
       </div>
     </section>
 
-
+    <!-- ===== DATI DELLO STUDENTE E DEL CORSO ===== -->
     <section class="info-group container border-bottom" id="info">
+
+      <!-- Studente -->
       <div class="container padding-24">
         <span class="info text"> Studente</span>
         <p class="informazione text text-size-200"> Alessandro Vincenzi</p>
       </div>
+
+      <!-- Corso -->
       <div class="container padding-24">
         <span class="info text"> Corso</span>
-        <p class="informazione text text-size-200"> ITS Web Design e Strategie Digitali</p>
+        <p class="informazione text text-size-200">
+          ITS Web Design e Strategie Digitali
+        </p>
       </div>
+
+      <!-- Modulo -->
       <div class="container padding-24">
         <span class="info text"> Modulo</span>
         <p class="informazione text text-size-200"> UI/UX Design</p>
       </div>
+
+      <!-- Scuola e anno -->
       <div class="container padding-24">
         <span class="info text"> Scuola e anno</span>
-        <p class="informazione text text-size-200"> ITS Accademy I-CREA, CFP Bauer Milano. 2026/2027</p>
+        <p class="informazione text text-size-200">
+          ITS Accademy I-CREA, CFP Bauer Milano. 2026/2027
+        </p>
       </div>
+
     </section>
 
     <!-- Ogni sezione del case study deve avere l'id della voce di menu corrispondente:
-     concept, sitemap, assets, prototipi, highlights. 
-     Un link href="#assets" porta all’elemento con id="assets". 
-     Quando costruirai le sezioni vere del case study, ognuna dovrà avere l’id della sua voce di menu, 
-     scritto con le stesse lettere. Fino ad allora i link del menu non portano da nessuna parte, 
-     e il menu mobile resta aperto quando scegli una voce: 
-     il codice della lezione 02 lo chiude solo se la destinazione esiste.-->
+     concept, sitemap, assets, prototipi, highlights.
+     Un link href="#assets" porta all’elemento con id="assets".
+     Quando costruirai le sezioni vere del case study, ognuna dovrà avere l’id della sua voce di menu,
+     scritto con le stesse lettere. Fino ad allora i link del menu non portano da nessuna parte,
+     e il menu mobile resta aperto quando scegli una voce:
+     il codice della lezione 02 lo chiude solo se la destinazione esiste. -->
 
-    <section class="theme-light border-top" id="questa-pagina" aria-labelledby="questa-pagina-title">
+    <!-- ===== CASE STUDY: ANCHE QUESTA PAGINA È UN PROGETTO ===== -->
+    <section class="theme-light border-top"
+             id="questa-pagina"
+             aria-labelledby="questa-pagina-title">
 
+      <!-- ===== INTESTAZIONE DEL CASE STUDY ===== -->
       <header class="container border-inline padding-64">
         <div class="case-study-intro">
 
-        <p class="eyebrow">
-          Dal progetto al case study
-          <svg class="eyebrow-cursor" width="8" height="10" viewBox="0 0 8 10" fill="none"
-            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="8" height="10" fill="#5FED83" />
-          </svg>
-        </p>
+          <!-- Etichetta e cursore decorativo -->
+          <p class="eyebrow">
+            Dal progetto al case study
+            <svg class="eyebrow-cursor"
+                 width="8"
+                 height="10"
+                 viewBox="0 0 8 10"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true">
+              <rect width="8" height="10" fill="#5FED83" />
+            </svg>
+          </p>
 
-        <h2 class="heading heading-size-4" id="questa-pagina-title">
-          Anche questa pagina è un progetto
-        </h2>
+          <!-- Titolo della sezione -->
+          <h2 class="heading heading-size-4" id="questa-pagina-title">
+            Anche questa pagina è un progetto
+          </h2>
 
-        <p class="text text-size-200 color-muted">
-          Per raccontare Radici ho progettato una seconda interfaccia:
-          questo case study. Ho studiato Primer Brand e combinato i suoi
-          componenti per dare una forma coerente al racconto.
-        </p>
+          <!-- Paragrafo introduttivo -->
+          <p class="text text-size-200 color-muted">
+            Per raccontare Radici ho progettato una seconda interfaccia:
+            questo case study. Ho studiato Primer Brand e combinato i suoi
+            componenti per dare una forma coerente al racconto.
+          </p>
 
         </div>
       </header>
-<div class="breakdownTabs border-block">
-  <div class="breakdownTabs-content container border-inline padding-64">
 
-<div class="breakdownTabs-visuals">
+      <!-- ===== COMPONENTE: ACCORDION E SCHEDE ===== -->
+      <div class="breakdownTabs border-block">
+        <div class="breakdownTabs-content container border-inline padding-64">
 
-  <img class="breakdownTabs-visual breakdownTabs-visual-study"
-       src="assets/images/primer-study.svg"
-       width="1440"
-       height="810"
-       alt="Immagine segnaposto: Studiare il sistema — tipografia, token e componenti">
+          <!-- ===== IMMAGINI DELLE TRE VOCI ===== -->
+          <div class="breakdownTabs-visuals">
 
-  <img class="breakdownTabs-visual breakdownTabs-visual-layout"
-       src="assets/images/primer-layout.svg"
-       width="1440"
-       height="810"
-       alt="Immagine segnaposto: Comporre la pagina">
+            <!-- Immagine di Studiare il sistema -->
+            <img class="breakdownTabs-visual breakdownTabs-visual-study"
+                 src="assets/images/primer-study.svg"
+                 width="1440"
+                 height="810"
+                 alt="Immagine segnaposto: Studiare il sistema — tipografia, token e componenti">
 
-  <img class="breakdownTabs-visual breakdownTabs-visual-check"
-       src="assets/images/primer-check.svg"
-       width="1440"
-       height="810"
-       alt="Immagine segnaposto: Verificare il risultato">
+            <!-- Immagine di Comporre la pagina -->
+            <img class="breakdownTabs-visual breakdownTabs-visual-layout"
+                 src="assets/images/primer-layout.svg"
+                 width="1440"
+                 height="810"
+                 alt="Immagine segnaposto: Comporre la pagina">
 
-</div>
-  <ul class="breakdownTabs-list">
+            <!-- Immagine di Verificare il risultato -->
+            <img class="breakdownTabs-visual breakdownTabs-visual-check"
+                 src="assets/images/primer-check.svg"
+                 width="1440"
+                 height="810"
+                 alt="Immagine segnaposto: Verificare il risultato">
 
-  <li class="breakdownTabs-item is-selected"
-      id="breakdownTabs-item-study">
+          </div>
 
-    <button type="button" class="breakdownTabs-button">
-      <svg class="icon"
-           viewBox="0 0 20 20"
-           xmlns="http://www.w3.org/2000/svg"
-           aria-hidden="true">
-        <path d="M6.24719 1.875C7.55232 1.875 8.70248 2.54213 9.37415 3.55371C10.0458 2.5422 11.195 1.87503 12.5001 1.875H18.7501C19.0953 1.875 19.3751 2.15482 19.3751 2.5V15.0518C19.3751 15.2182 19.3086 15.3778 19.1906 15.4951C19.0725 15.6124 18.9126 15.6778 18.7462 15.6768L12.3448 15.6338C11.676 15.6293 11.0327 15.8932 10.5597 16.3662L9.8175 17.1084C9.57347 17.3524 9.1778 17.3524 8.93372 17.1084L8.18176 16.3574C7.71294 15.8886 7.0772 15.625 6.41418 15.625H0.00012207C-0.345018 15.625 -0.624878 15.3451 -0.624878 15V2.5C-0.624878 2.15485 -0.345018 1.87504 0.00012207 1.875H6.24719ZM12.5001 3.125C11.1194 3.12504 10.0001 4.24432 10.0001 5.625V15.1934C10.6659 14.6664 11.495 14.378 12.3527 14.3838L18.1251 14.4229V3.125H12.5001ZM0.625122 14.375H6.41418C7.26684 14.375 8.08957 14.6654 8.75012 15.1914L8.74719 5.62305C8.74604 4.24315 7.62709 3.125 6.24719 3.125H0.625122V14.375Z" />
-      </svg>
+          <!-- ===== LISTA DELLE TRE VOCI ===== -->
+          <ul class="breakdownTabs-list">
 
-      <span class="breakdownTabs-title">
-        <span class="text-size-350">Studiare il sistema</span>
+            <!-- ===== PRIMA VOCE: STUDIARE IL SISTEMA ===== -->
+            <li class="breakdownTabs-item is-selected"
+                id="breakdownTabs-item-study">
 
-        <svg class="icon breakdownTabs-toggle"
-             viewBox="0 0 22 22"
-             xmlns="http://www.w3.org/2000/svg"
-             aria-hidden="true">
-          <path d="M10.9607 8.2502L16.2708 13.5603C16.5596 13.8491 16.3551 14.3428 15.9467 14.3428L5.32644 14.3428C4.91811 14.3428 4.71361 13.8491 5.00235 13.5604L10.3125 8.2502C10.4915 8.07121 10.7817 8.07121 10.9607 8.2502Z" />
-        </svg>
-      </span>
-    </button>
+              <!-- Pulsante con icona, titolo e triangolo -->
+              <button type="button" class="breakdownTabs-button">
 
-    <p class="breakdownTabs-text text-size-200 color-muted">
-      Sono partito dalla documentazione e dalle pagine GitHub:
-      tipografia, colori, spazi e comportamenti formano un insieme
-      di decisioni. Ho usato Primer Brand come vocabolario per
-      costruire la mia pagina.
-    </p>
-  </li>
+                <!-- Icona del libro -->
+                <svg class="icon"
+                     viewBox="0 0 20 20"
+                     xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true">
+                  <path d="M6.24719 1.875C7.55232 1.875 8.70248 2.54213 9.37415 3.55371C10.0458 2.5422 11.195 1.87503 12.5001 1.875H18.7501C19.0953 1.875 19.3751 2.15482 19.3751 2.5V15.0518C19.3751 15.2182 19.3086 15.3778 19.1906 15.4951C19.0725 15.6124 18.9126 15.6778 18.7462 15.6768L12.3448 15.6338C11.676 15.6293 11.0327 15.8932 10.5597 16.3662L9.8175 17.1084C9.57347 17.3524 9.1778 17.3524 8.93372 17.1084L8.18176 16.3574C7.71294 15.8886 7.0772 15.625 6.41418 15.625H0.00012207C-0.345018 15.625 -0.624878 15.3451 -0.624878 15V2.5C-0.624878 2.15485 -0.345018 1.87504 0.00012207 1.875H6.24719ZM12.5001 3.125C11.1194 3.12504 10.0001 4.24432 10.0001 5.625V15.1934C10.6659 14.6664 11.495 14.378 12.3527 14.3838L18.1251 14.4229V3.125H12.5001ZM0.625122 14.375H6.41418C7.26684 14.375 8.08957 14.6654 8.75012 15.1914L8.74719 5.62305C8.74604 4.24315 7.62709 3.125 6.24719 3.125H0.625122V14.375Z" />
+                </svg>
 
-  <li class="breakdownTabs-item"
-      id="breakdownTabs-item-layout">
+                <!-- Titolo e triangolo della prima voce -->
+                <span class="breakdownTabs-title">
+                  <span class="text-size-350">Studiare il sistema</span>
 
-    <button type="button" class="breakdownTabs-button">
-      <svg class="icon"
-           viewBox="0 0 21 20"
-           xmlns="http://www.w3.org/2000/svg"
-           aria-hidden="true">
-        <path d="M17.5 1.04199C18.4204 1.04199 19.1668 1.78768 19.167 2.70801V16.042C19.1668 16.9623 18.4204 17.708 17.5 17.708H8.33301C7.41283 17.7078 6.66717 16.9622 6.66699 16.042V2.70801C6.66717 1.78782 7.41283 1.04221 8.33301 1.04199H17.5ZM8.33301 2.29199C8.10318 2.29221 7.91717 2.47817 7.91699 2.70801V16.042C7.91717 16.2718 8.10319 16.4578 8.33301 16.458H17.5C17.73 16.458 17.9168 16.272 17.917 16.042V2.70801C17.9168 2.47804 17.73 2.29199 17.5 2.29199H8.33301ZM4.30371 2.56641C4.61245 2.41204 4.98821 2.53697 5.14258 2.8457C5.2967 3.15424 5.17161 3.52912 4.86328 3.68359C4.67288 3.7788 4.61632 3.83096 4.59961 3.85156C4.59587 3.85618 4.59464 3.85842 4.59277 3.86426C4.58999 3.87303 4.58303 3.90059 4.58301 3.95801V14.792C4.58303 14.8494 4.58999 14.877 4.59277 14.8857C4.59464 14.8916 4.59586 14.8938 4.59961 14.8984C4.61632 14.919 4.67287 14.9712 4.86328 15.0664C5.17161 15.2209 5.29669 15.5958 5.14258 15.9043C4.98821 16.213 4.61245 16.338 4.30371 16.1836C4.07754 16.0705 3.82044 15.9217 3.62891 15.6855C3.41687 15.4241 3.33306 15.1197 3.33301 14.792V3.95801C3.33307 3.63029 3.41687 3.32595 3.62891 3.06445C3.82044 2.8283 4.07753 2.67952 4.30371 2.56641ZM0.9375 3.83398C1.23625 3.66137 1.61823 3.76381 1.79102 4.0625C1.96354 4.36113 1.86191 4.74315 1.56348 4.91602C1.43888 4.98809 1.34971 5.05822 1.29688 5.12012C1.25076 5.17421 1.25 5.19898 1.25 5.20801V13.542C1.25 13.5512 1.25106 13.5761 1.29688 13.6299C1.34971 13.6918 1.43888 13.7619 1.56348 13.834C1.86191 14.0069 1.96354 14.3889 1.79102 14.6875C1.61823 14.9862 1.23625 15.0886 0.9375 14.916C0.608492 14.7257 0.000174553 14.2975 0 13.542V5.20801C0.000174638 4.45246 0.608492 4.02431 0.9375 3.83398Z" />
-      </svg>
+                  <svg class="icon breakdownTabs-toggle"
+                       viewBox="0 0 22 22"
+                       xmlns="http://www.w3.org/2000/svg"
+                       aria-hidden="true">
+                    <path d="M10.9607 8.2502L16.2708 13.5603C16.5596 13.8491 16.3551 14.3428 15.9467 14.3428L5.32644 14.3428C4.91811 14.3428 4.71361 13.8491 5.00235 13.5604L10.3125 8.2502C10.4915 8.07121 10.7817 8.07121 10.9607 8.2502Z" />
+                  </svg>
+                </span>
 
-      <span class="breakdownTabs-title">
-        <span class="text-size-350">Comporre la pagina</span>
+              </button>
 
-        <svg class="icon breakdownTabs-toggle"
-             viewBox="0 0 22 22"
-             xmlns="http://www.w3.org/2000/svg"
-             aria-hidden="true">
-          <path d="M10.9607 8.2502L16.2708 13.5603C16.5596 13.8491 16.3551 14.3428 15.9467 14.3428L5.32644 14.3428C4.91811 14.3428 4.71361 13.8491 5.00235 13.5604L10.3125 8.2502C10.4915 8.07121 10.7817 8.07121 10.9607 8.2502Z" />
-        </svg>
-      </span>
-    </button>
+              <!-- Testo della prima voce -->
+              <p class="breakdownTabs-text text-size-200 color-muted">
+                Sono partito dalla documentazione e dalle pagine GitHub:
+                tipografia, colori, spazi e comportamenti formano un insieme
+                di decisioni. Ho usato Primer Brand come vocabolario per
+                costruire la mia pagina.
+              </p>
 
-    <p class="breakdownTabs-text text-size-200 color-muted">
-      Ho selezionato gli elaborati e dato a ogni contenuto una forma:
-      Pillar per i livelli di lettura, Tabs per le viste, Testimonial
-      per una riflessione. Gerarchie e spazi collegano i capitoli;
-      sul mobile la composizione cambia disposizione.
-    </p>
-  </li>
+            </li>
 
-  <li class="breakdownTabs-item"
-      id="breakdownTabs-item-check">
+            <!-- ===== SECONDA VOCE: COMPORRE LA PAGINA ===== -->
+            <li class="breakdownTabs-item"
+                id="breakdownTabs-item-layout">
 
-    <button type="button" class="breakdownTabs-button">
-      <svg class="icon"
-           viewBox="0 0 20 20"
-           xmlns="http://www.w3.org/2000/svg"
-           aria-hidden="true">
-        <path d="M5.80806 3.51704C6.05214 3.27296 6.44777 3.27296 6.69185 3.51704C6.93586 3.76113 6.9359 4.15678 6.69185 4.40083L1.71724 9.37544L6.69185 14.3501C6.93593 14.5941 6.93593 14.9898 6.69185 15.2338C6.44775 15.4777 6.05207 15.4779 5.80806 15.2338L0.392043 9.81685C0.147965 9.57277 0.147965 9.17714 0.392043 8.93306L5.80806 3.51704ZM12.0581 3.51704C12.3021 3.27296 12.6978 3.27296 12.9418 3.51704L18.3588 8.93306C18.6029 9.17709 18.6028 9.57276 18.3588 9.81685L12.9418 15.2338C12.6978 15.4777 12.3021 15.4779 12.0581 15.2338C11.8141 14.9898 11.8142 14.5941 12.0581 14.3501L17.0327 9.37544L12.0581 4.40083C11.8141 4.15687 11.8143 3.76115 12.0581 3.51704Z" />
-      </svg>
+              <!-- Pulsante con icona, titolo e triangolo -->
+              <button type="button" class="breakdownTabs-button">
 
-      <span class="breakdownTabs-title">
-        <span class="text-size-350">Verificare il risultato</span>
+                <!-- Icona delle versioni -->
+                <svg class="icon"
+                     viewBox="0 0 21 20"
+                     xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true">
+                  <path d="M17.5 1.04199C18.4204 1.04199 19.1668 1.78768 19.167 2.70801V16.042C19.1668 16.9623 18.4204 17.708 17.5 17.708H8.33301C7.41283 17.7078 6.66717 16.9622 6.66699 16.042V2.70801C6.66717 1.78782 7.41283 1.04221 8.33301 1.04199H17.5ZM8.33301 2.29199C8.10318 2.29221 7.91717 2.47817 7.91699 2.70801V16.042C7.91717 16.2718 8.10319 16.4578 8.33301 16.458H17.5C17.73 16.458 17.9168 16.272 17.917 16.042V2.70801C17.9168 2.47804 17.73 2.29199 17.5 2.29199H8.33301ZM4.30371 2.56641C4.61245 2.41204 4.98821 2.53697 5.14258 2.8457C5.2967 3.15424 5.17161 3.52912 4.86328 3.68359C4.67288 3.7788 4.61632 3.83096 4.59961 3.85156C4.59587 3.85618 4.59464 3.85842 4.59277 3.86426C4.58999 3.87303 4.58303 3.90059 4.58301 3.95801V14.792C4.58303 14.8494 4.58999 14.877 4.59277 14.8857C4.59464 14.8916 4.59586 14.8938 4.59961 14.8984C4.61632 14.919 4.67287 14.9712 4.86328 15.0664C5.17161 15.2209 5.29669 15.5958 5.14258 15.9043C4.98821 16.213 4.61245 16.338 4.30371 16.1836C4.07754 16.0705 3.82044 15.9217 3.62891 15.6855C3.41687 15.4241 3.33306 15.1197 3.33301 14.792V3.95801C3.33307 3.63029 3.41687 3.32595 3.62891 3.06445C3.82044 2.8283 4.07753 2.67952 4.30371 2.56641ZM0.9375 3.83398C1.23625 3.66137 1.61823 3.76381 1.79102 4.0625C1.96354 4.36113 1.86191 4.74315 1.56348 4.91602C1.43888 4.98809 1.34971 5.05822 1.29688 5.12012C1.25076 5.17421 1.25 5.19898 1.25 5.20801V13.542C1.25 13.5512 1.25106 13.5761 1.29688 13.6299C1.34971 13.6918 1.43888 13.7619 1.56348 13.834C1.86191 14.0069 1.96354 14.3889 1.79102 14.6875C1.61823 14.9862 1.23625 15.0886 0.9375 14.916C0.608492 14.7257 0.000174553 14.2975 0 13.542V5.20801C0.000174638 4.45246 0.608492 4.02431 0.9375 3.83398Z" />
+                </svg>
 
-        <svg class="icon breakdownTabs-toggle"
-             viewBox="0 0 22 22"
-             xmlns="http://www.w3.org/2000/svg"
-             aria-hidden="true">
-          <path d="M10.9607 8.2502L16.2708 13.5603C16.5596 13.8491 16.3551 14.3428 15.9467 14.3428L5.32644 14.3428C4.91811 14.3428 4.71361 13.8491 5.00235 13.5604L10.3125 8.2502C10.4915 8.07121 10.7817 8.07121 10.9607 8.2502Z" />
-        </svg>
-      </span>
-    </button>
+                <!-- Titolo e triangolo della seconda voce -->
+                <span class="breakdownTabs-title">
+                  <span class="text-size-350">Comporre la pagina</span>
 
-    <p class="breakdownTabs-text text-size-200 color-muted">
-      Il lavoro continua nel browser: controllo la leggibilità,
-      i collegamenti e i controlli da tastiera a larghezze diverse.
-      La prova pratica richiede anche di saper spiegare e modificare
-      il codice, mantenere Figma e sito coerenti e pubblicare il
-      lavoro con GitHub Pages.
-    </p>
-  </li>
-    </ul>
-  </div>
-</div>
+                  <svg class="icon breakdownTabs-toggle"
+                       viewBox="0 0 22 22"
+                       xmlns="http://www.w3.org/2000/svg"
+                       aria-hidden="true">
+                    <path d="M10.9607 8.2502L16.2708 13.5603C16.5596 13.8491 16.3551 14.3428 15.9467 14.3428L5.32644 14.3428C4.91811 14.3428 4.71361 13.8491 5.00235 13.5604L10.3125 8.2502C10.4915 8.07121 10.7817 8.07121 10.9607 8.2502Z" />
+                  </svg>
+                </span>
 
-</section>
+              </button>
+
+              <!-- Testo della seconda voce -->
+              <p class="breakdownTabs-text text-size-200 color-muted">
+                Ho selezionato gli elaborati e dato a ogni contenuto una forma:
+                Pillar per i livelli di lettura, Tabs per le viste, Testimonial
+                per una riflessione. Gerarchie e spazi collegano i capitoli;
+                sul mobile la composizione cambia disposizione.
+              </p>
+
+            </li>
+
+            <!-- ===== TERZA VOCE: VERIFICARE IL RISULTATO ===== -->
+            <li class="breakdownTabs-item"
+                id="breakdownTabs-item-check">
+
+              <!-- Pulsante con icona, titolo e triangolo -->
+              <button type="button" class="breakdownTabs-button">
+
+                <!-- Icona del codice -->
+                <svg class="icon"
+                     viewBox="0 0 20 20"
+                     xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true">
+                  <path d="M5.80806 3.51704C6.05214 3.27296 6.44777 3.27296 6.69185 3.51704C6.93586 3.76113 6.9359 4.15678 6.69185 4.40083L1.71724 9.37544L6.69185 14.3501C6.93593 14.5941 6.93593 14.9898 6.69185 15.2338C6.44775 15.4777 6.05207 15.4779 5.80806 15.2338L0.392043 9.81685C0.147965 9.57277 0.147965 9.17714 0.392043 8.93306L5.80806 3.51704ZM12.0581 3.51704C12.3021 3.27296 12.6978 3.27296 12.9418 3.51704L18.3588 8.93306C18.6029 9.17709 18.6028 9.57276 18.3588 9.81685L12.9418 15.2338C12.6978 15.4777 12.3021 15.4779 12.0581 15.2338C11.8141 14.9898 11.8142 14.5941 12.0581 14.3501L17.0327 9.37544L12.0581 4.40083C11.8141 4.15687 11.8143 3.76115 12.0581 3.51704Z" />
+                </svg>
+
+                <!-- Titolo e triangolo della terza voce -->
+                <span class="breakdownTabs-title">
+                  <span class="text-size-350">Verificare il risultato</span>
+
+                  <svg class="icon breakdownTabs-toggle"
+                       viewBox="0 0 22 22"
+                       xmlns="http://www.w3.org/2000/svg"
+                       aria-hidden="true">
+                    <path d="M10.9607 8.2502L16.2708 13.5603C16.5596 13.8491 16.3551 14.3428 15.9467 14.3428L5.32644 14.3428C4.91811 14.3428 4.71361 13.8491 5.00235 13.5604L10.3125 8.2502C10.4915 8.07121 10.7817 8.07121 10.9607 8.2502Z" />
+                  </svg>
+                </span>
+
+              </button>
+
+              <!-- Testo della terza voce -->
+              <p class="breakdownTabs-text text-size-200 color-muted">
+                Il lavoro continua nel browser: controllo la leggibilità,
+                i collegamenti e i controlli da tastiera a larghezze diverse.
+                La prova pratica richiede anche di saper spiegare e modificare
+                il codice, mantenere Figma e sito coerenti e pubblicare il
+                lavoro con GitHub Pages.
+              </p>
+
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </section>
   </main>
-  <footer></footer>
-</body>
 
+  <!-- ===== FOOTER: PARTE FINALE DELLA PAGINA ===== -->
+  <footer></footer>
+
+</body>
 </html>
 
+<!-- ===== APPUNTI SUI PROBLEMI INIZIALI ===== -->
+<!--
+1 Mancano le tre voci del case study.. ho aggiunto una sola struttura HTML
+con immagini, icone e pulsanti. Il CSS la dispone come accordion su mobile
+e tre schede da 1000px; JavaScript cambia la voce selezionata e l’immagine.
+ho verificato Invio, Spazio e mantenimento di selezione e focus al cambio
+di larghezza. Restano da completare le rifiniture per gli schermi stretti.
 
-<!-- 1 Mancano le tre voci del case study.. ho aggiunto una sola struttura HTML con immagini, icone e pulsanti. Il CSS la dispone come accordion su mobile e tre schede da 1000px; JavaScript cambia la voce selezionata e l’immagine. ho verificato Invio, Spazio e mantenimento di selezione e focus al cambio di larghezza. 
- Restano da completare le rifiniture per gli schermi stretti.
-2 Dati del corso fuori schermo: non lo abbiamo ancora affrontato
-3 Icona menu mancante e hero illeggibile senza sfondo.. menu.svg ora compare nella tua cartella
-4 Sezioni mancanti e link senza destinazione: non ho ancora costruito Concept, Sitemap, Assets, Prototipi e Highlights.-->
+2 Dati del corso fuori schermo: non lo abbiamo ancora affrontato.
+
+3 Icona menu mancante e hero illeggibile senza sfondo..
+menu.svg ora compare nella tua cartella.
+
+4 Sezioni mancanti e link senza destinazione: non ho ancora costruito
+Concept, Sitemap, Assets, Prototipi e Highlights.
+-->
+```
