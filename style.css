@@ -37,12 +37,17 @@ img {
     --color-button-primary-bg: #08872B;
     --icon-size: 1.25em;
     --breakdownTabs-title-gap: 1.5em;
+    --breakdownTabs-toggle-size: 1.5em;
+    --breakdownTabs-button-padding: 1.5em 0;
+    --breakdownTabs-button-gap: 0.75em;
     --icon-color: #08872B;
     --color-button-secondary-bg: rgba(255, 255, 255, 0.12);
     --color-button-secondary-border: rgba(255, 255, 255, 0.06);
     --color-focus: #ff3c00;     
     --container-width: 1280px;
+    --spacing-80: 80px;
     --spacing-64: 64px;
+    --spacing-40: 40px;
     --spacing-24: 24px;
     --heading-1-font-size: 56px;
     --heading-1-line-height: 1.1;
@@ -660,12 +665,13 @@ body {
     font: inherit;
     text-align: left;
     width: 100%;
-    padding: 0;
+    padding: var(--breakdownTabs-button-padding);
     cursor: pointer;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: var(--breakdownTabs-button-gap);
 }
 
 .breakdownTabs-title {
@@ -701,5 +707,68 @@ body {
     .breakdownTabs-item:hover::before {
         background: var(--brand-color-accent-primary);
         transform: scaleY(var(--border-selected-scale));
+        
+    }
+}
+
+/*triangoli cambiano alla selezione*/
+
+.breakdownTabs-toggle {
+    --icon-size: var(--breakdownTabs-toggle-size);
+    transform: rotate(180deg);
+    display: none;
+}
+
+.breakdownTabs-item.is-selected .breakdownTabs-toggle {
+    transform: rotate(0deg);
+}
+/* Il contorno di focus circonda tutta la voce */
+.breakdownTabs-button:focus-visible {
+    outline: none;
+}
+
+.breakdownTabs-item:has(.breakdownTabs-button:focus-visible) {
+    outline: var(--focus-outline-width) solid var(--color-focus);
+    outline-offset: var(--focus-outline-offset);
+}
+
+/* Queste regole si attivano quando JavaScript è pronto */
+.breakdownTabs-ready
+.breakdownTabs-item:not(.is-selected)
+.breakdownTabs-text {
+    display: none;
+}
+
+.breakdownTabs-ready .breakdownTabs-toggle {
+    display: block;
+}
+@media (min-width: 1000px) {
+    .breakdownTabs-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--spacing-40);
+    }
+
+    .breakdownTabs-item {
+        border-bottom: 0;
+        color: var(--color-muted);
+    }
+
+    .breakdownTabs-item.is-selected {
+        color: var(--color-black);
+    }
+
+    .breakdownTabs-ready
+    .breakdownTabs-item:not(.is-selected)
+    .breakdownTabs-text {
+        display: block;
+    }
+
+    .breakdownTabs-toggle,
+    .breakdownTabs-ready .breakdownTabs-toggle {
+        display: none;
+    }
+    .breakdownTabs-content {
+    padding: var(--spacing-64) var(--spacing-64) var(--spacing-80);
     }
 }
