@@ -994,3 +994,6 @@ body {
         margin-bottom: var(--spacing-36);
     }
 }
+@media (max-width:375px) {
+    .info-group { display: block;}
+}
