@@ -79,10 +79,11 @@ img {
     --brand-color-text-default: #000000;
     --brand-color-accent-primary: #0D6731;
 }
-
-@media (max-width: 1000px) {
+@media (max-width: 640px) {
     :root {
         --heading-1-font-size: 36px;
+        --text-350-font-size: 1.125em;
+        --text-350-line-height: 1.333333;
     }
 }
 
