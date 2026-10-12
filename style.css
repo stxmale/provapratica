@@ -949,7 +949,7 @@ body {
 @media (min-width: 1000px) {
     .breakdownTabs-list {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: var(--spacing-40);
     }
 
@@ -994,6 +994,11 @@ body {
         margin-bottom: var(--spacing-36);
     }
 }
-@media (max-width:375px) {
-    .info-group { display: block;}
+/*diamo un valore piu alto di 370px cosi si riduce prima che si ristringano troppo*/
+@media (max-width:800px) {
+.info-group { 
+    display: block;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-24);
+}
 }
