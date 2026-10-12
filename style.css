@@ -949,7 +949,7 @@ body {
 @media (min-width: 1000px) {
     .breakdownTabs-list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: var(--spacing-40);
     }
 
@@ -994,11 +994,16 @@ body {
         margin-bottom: var(--spacing-36);
     }
 }
-/*diamo un valore piu alto di 370px cosi si riduce prima che si ristringano troppo*/
-@media (max-width:800px) {
-.info-group { 
-    display: block;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-24);
-}
+/*diamo un valore piu alto di 370px cosi si riduce prima che si ristringano troppo
+uso 640 perchè è una variabile gia utilizzata*/
+/* Sugli schermi più piccoli disponiamo i dati in due colonne */
+@media (max-width: 640px) {
+    .info-group {
+        display: grid;
+/*Crea due colonne uguali.repeat(2, minmax(0, 1fr)) 
+permette anche alle colonne di restringersi quando contengono testi lunghi, 
+aiutando a evitare che escano dallo schermo.*/
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--spacing-24);
+    }
 }
