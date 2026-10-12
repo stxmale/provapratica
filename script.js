@@ -58,4 +58,25 @@ desktopMedia.addEventListener('change', function () {
   else if (desktopMedia.matches && focusOnButton) navigationPanel.querySelector('a').focus();
   else if (!desktopMedia.matches && focusInNavigation) navigationButton.focus();
 });
-// ok
+// Case study: elementi del componente
+const breakdownTabs = document.querySelector('.breakdownTabs');
+const breakdownTabsItems = document.querySelectorAll('.breakdownTabs-item');
+const breakdownTabsButtons = document.querySelectorAll('.breakdownTabs-button');
+// querySelector trova il singolo contenitore.
+// querySelectorAll trova tutte e tre le voci e tutti e tre i pulsanti, nell’ordine dell’HTML.
+breakdownTabs.classList.add('breakdownTabs-ready');
+//classList.add() aggiunge la classe al contenitore del componente.
+function selectBreakdownTab(selectedIndex) {
+  for (let i = 0; i < breakdownTabsItems.length; i++) {
+    if (i === selectedIndex) {
+      breakdownTabsItems[i].classList.add('is-selected');
+    } else {
+      breakdownTabsItems[i].classList.remove('is-selected');
+    }
+  }
+}
+for (let i = 0; i < breakdownTabsButtons.length; i++) {
+  breakdownTabsButtons[i].addEventListener('click', function () {
+    selectBreakdownTab(i);
+  });
+}
