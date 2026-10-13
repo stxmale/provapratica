@@ -49,6 +49,7 @@ img {
     --breakdownTabs-button-padding: 1.5em 0;
     --breakdownTabs-button-gap: 0.75em;
     --breakdownTabs-text-gap-desktop: 0.75em;
+    --breakdownTabs-text-padding-bottom: 0.75em;
     --icon-color: #08872B;
     --color-button-secondary-bg: rgba(255, 255, 255, 0.12);
     --color-button-secondary-border: rgba(255, 255, 255, 0.06);
@@ -58,6 +59,7 @@ img {
     --spacing-64: 64px;
     --spacing-40: 40px;
     --spacing-36: 36px;
+    --spacing-32: 32px;
     --spacing-24: 24px;
     --spacing-28: 28px;
     --brand-Card-padding-inline: 1.25em;
@@ -89,7 +91,7 @@ img {
 }
 
 /* Schermi stretti: riduciamo le dimensioni dei titoli */
-@media (max-width: 640px) {
+@media (max-width: 800px) {
     :root {
         --heading-1-font-size: 36px;
         --text-350-font-size: 1.125em;
@@ -984,6 +986,7 @@ body {
     .breakdownTabs {
         --breakdownTabs-button-padding: var(--spacing-28) 0 0;
         --breakdownTabs-button-gap: var(--brand-Card-padding-inline);
+        --breakdownTabs-text-padding-bottom: 0;
     }
 
     .breakdownTabs-text {
@@ -997,7 +1000,7 @@ body {
 /*diamo un valore piu alto di 370px cosi si riduce prima che si ristringano troppo
 uso 640 perchè è una variabile gia utilizzata*/
 /* Sugli schermi più piccoli disponiamo i dati in due colonne */
-@media (max-width: 640px) {
+@media (max-width: 800px) {
     .info-group {
         display: grid;
 /*Crea due colonne uguali.repeat(2, minmax(0, 1fr)) 
@@ -1006,4 +1009,26 @@ aiutando a evitare che escano dallo schermo.*/
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--spacing-24);
     }
+}
+/* Schermi stretti: spazi dell’intestazione del case study */
+@media (max-width: 800px) {
+    #questa-pagina > header {
+        padding: var(--spacing-32) var(--spacing-24);
+    }
+
+    .case-study-intro {
+        padding: var(--spacing-24);
+    }
+    /* Mobile: spazio attorno all’immagine e alle tre voci */
+.breakdownTabs-content {
+   padding: var(--spacing-36) var(--spacing-24) var(--spacing-40);
+}
+/*Mobile: spazio fra l’immagine e le voci */
+.breakdownTabs-visuals {
+    margin-bottom: var(--spacing-40);
+}
+}
+/* Spazio fra il paragrafo della voce e la linea inferiore */
+.breakdownTabs-text {
+    padding-bottom: var(--breakdownTabs-text-padding-bottom);
 }
