@@ -107,14 +107,15 @@ body {
 }
 
 
-/* Hero: colori e misure della prima sezione */
+/* Hero: colori, misure e sfondo della prima sezione */
 .hero {
     --hero-text-max-width: 600px;
     --hero-content-gap: 1em;
     color: var(--color-white);
     text-align: center;
+    background-color: var(--color-black);
+    background-image: url("assets/images/sfondo hero.png");
 }
-
 
 /* Contenitore comune: limita la larghezza e centra il blocco */
 .container {
@@ -1029,4 +1030,96 @@ aiutando a evitare che escano dallo schermo.*/
 /* Spazio fra il paragrafo della voce e la linea inferiore */
 .breakdownTabs-text {
     padding-bottom: var(--breakdownTabs-text-padding-bottom);
+}
+
+
+/* Assets: spazio interno della sezione */
+.assets-content {
+    padding: var(--spacing-64);
+}
+
+/* Presentazione: distanza fra titolo, paragrafo e lista */
+.assets-intro {
+    display: grid;
+    gap: 1em;
+    margin-bottom: var(--spacing-40);
+}
+
+/* Lista: linea sotto l’ultima voce */
+.assets-list {
+    border-bottom: var(--border-width) solid var(--color-border-muted);
+}
+
+/* Singola voce: linea superiore */
+.assets-item {
+    border-top: var(--border-width) solid var(--color-border-muted);
+}
+
+/* Titolo cliccabile: spazio interno e cursore */
+.assets-title {
+    padding: var(--spacing-24) 0;
+    cursor: pointer;
+}
+
+/* Titolo sulla stessa riga del triangolino */
+.assets-title h3 {
+    display: inline;
+}
+
+/* Triangolino: riprende il verde delle altre icone */
+.assets-title::marker {
+    color: var(--icon-color);
+}
+
+/* Voce aperta: evidenzia la linea superiore */
+.assets-item[open] {
+    border-top-color: var(--brand-color-accent-primary);
+}
+
+/* Tastiera: rende riconoscibile la voce raggiunta con Tab */
+.assets-title:focus-visible {
+    outline: var(--focus-outline-width) solid var(--color-focus);
+    outline-offset: var(--focus-outline-offset);
+}
+
+/* Contenuto aperto: testo sopra e immagine sotto */
+.assets-body {
+    display: grid;
+    gap: var(--spacing-24);
+    padding-bottom: var(--spacing-24);
+}
+
+/* Immagine: mantiene le proporzioni e segue la larghezza disponibile */
+.assets-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Schermi piccoli: riduce lo spazio interno */
+@media (max-width: 800px) {
+    .assets-content {
+        padding: var(--spacing-32) var(--spacing-24);
+    }
+}
+
+
+/* Sitemap: spazio interno della sezione */
+.sitemap-content {
+    padding: var(--spacing-64);
+}
+
+/* Diagramma: si adatta al contenitore e mantiene le proporzioni */
+.sitemap-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: var(--spacing-24);
+}
+
+/* Schermi piccoli: riduce lo spazio interno */
+@media (max-width: 800px) {
+    .sitemap-content {
+        padding: var(--spacing-32) var(--spacing-24);
+    }
 }
