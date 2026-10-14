@@ -692,11 +692,10 @@ body {
 }
 
 
-/* Dati del corso: disposizione del gruppo */
+/* Dati del corso: quattro colonne uguali */
 .info-group {
-    display: flex;
-
-    align-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 
