@@ -997,37 +997,42 @@ body {
         margin-bottom: var(--spacing-36);
     }
 }
+
 /*diamo un valore piu alto di 370px cosi si riduce prima che si ristringano troppo
 uso 640 perchè è una variabile gia utilizzata*/
 /* Sugli schermi più piccoli disponiamo i dati in due colonne */
 @media (max-width: 800px) {
     .info-group {
         display: grid;
-/*Crea due colonne uguali.repeat(2, minmax(0, 1fr)) 
+        /*Crea due colonne uguali.repeat(2, minmax(0, 1fr)) 
 permette anche alle colonne di restringersi quando contengono testi lunghi, 
 aiutando a evitare che escano dallo schermo.*/
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--spacing-24);
     }
 }
+
 /* Schermi stretti: spazi dell’intestazione del case study */
 @media (max-width: 800px) {
-    #questa-pagina > header {
+    #questa-pagina>header {
         padding: var(--spacing-32) var(--spacing-24);
     }
 
     .case-study-intro {
         padding: var(--spacing-24);
     }
+
     /* Mobile: spazio attorno all’immagine e alle tre voci */
-.breakdownTabs-content {
-   padding: var(--spacing-36) var(--spacing-24) var(--spacing-40);
+    .breakdownTabs-content {
+        padding: var(--spacing-36) var(--spacing-24) var(--spacing-40);
+    }
+
+    /*Mobile: spazio fra l’immagine e le voci */
+    .breakdownTabs-visuals {
+        margin-bottom: var(--spacing-40);
+    }
 }
-/*Mobile: spazio fra l’immagine e le voci */
-.breakdownTabs-visuals {
-    margin-bottom: var(--spacing-40);
-}
-}
+
 /* Spazio fra il paragrafo della voce e la linea inferiore */
 .breakdownTabs-text {
     padding-bottom: var(--breakdownTabs-text-padding-bottom);
@@ -1065,7 +1070,7 @@ aiutando a evitare che escano dallo schermo.*/
 /* Titolo sulla stessa riga del triangolino */
 .assets-title h3 {
     display: inline;
-        font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
 }
 
 /* Triangolino: riprende il verde delle altre icone */
