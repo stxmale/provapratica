@@ -1130,3 +1130,11 @@ aiutando a evitare che escano dallo schermo.*/
         padding: var(--spacing-32) var(--spacing-24);
     }
 }
+
+
+
+
+/*A cosa servono ::before, ::after e position: relative nelle schede?
+::before disegna la linea decorativa.
+::after estende l’area cliccabile del pulsante sulla scheda. 
+position: relative sulla voce offre il riferimento per posizionare queste parti con absolute*/
