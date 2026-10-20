@@ -135,7 +135,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: var(--hero-content-gap);
-    background-image: url(assets/images/sfondo\ hero.png);
 }
 
 
@@ -747,6 +746,11 @@ body {
     color: var(--color-white);
 }
 
+/* Bordo comune: linea inferiore */
+.border-bottom {
+    border-bottom: var(--border-width) solid var(--color-border-muted);
+}
+
 
 /* Bordi comuni: linee a sinistra e a destra */
 .border-inline {
@@ -1061,23 +1065,30 @@ aiutando a evitare che escano dallo schermo.*/
     border-top: var(--border-width) solid var(--color-border-muted);
 }
 
-/* Titolo cliccabile: spazio interno e cursore */
+/* Assets: titolo a sinistra e triangolo a destra */
 .assets-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-24);
     padding: var(--spacing-24) 0;
     cursor: pointer;
 }
 
-/* Titolo sulla stessa riga del triangolino */
+/* Assets: titoli in grassetto */
 .assets-title h3 {
-    display: inline;
     font-weight: var(--font-weight-bold);
 }
 
-/* Triangolino: riprende il verde delle altre icone */
-.assets-title::marker {
-    color: var(--icon-color);
+/* Assets: triangolo rivolto in basso */
+.assets-toggle {
+    transform: rotate(0deg);
 }
 
+/* Assets: triangolo rivolto in alto quando la voce è aperta */
+.assets-item[open] .assets-toggle {
+    transform: rotate(180deg);
+}
 /* Voce aperta: evidenzia la linea superiore */
 .assets-item[open] {
     border-top-color: var(--brand-color-accent-primary);
