@@ -1089,6 +1089,7 @@ aiutando a evitare che escano dallo schermo.*/
 .assets-item[open] .assets-toggle {
     transform: rotate(180deg);
 }
+
 /* Voce aperta: evidenzia la linea superiore */
 .assets-item[open] {
     border-top-color: var(--brand-color-accent-primary);
