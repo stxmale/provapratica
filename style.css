@@ -1131,6 +1131,106 @@ aiutando a evitare che escano dallo schermo.*/
     }
 }
 
+/* Progetto: centra titolo, descrizione e pulsante */
+.project-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-24);
+    padding: var(--spacing-80) var(--spacing-24);
+}
+
+/* Footer: fondo scuro e linea verde superiore */
+.site-footer {
+    background-color: var(--color-border-muted);
+    border-top: var(--border-width) solid var(--brand-color-accent-primary);
+}
+
+/* Footer: logo a sinistra e collegamenti a destra */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-24);
+    padding: var(--spacing-32) var(--spacing-24);
+}
+
+/* Logo: elimina lo spazio sotto l’immagine */
+.footer-logo {
+    display: block;
+}
+
+/* Collegamenti: li affianca e permette di andare a capo */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-24);
+    font-family: var(--font-mono);
+    font-size: var(--text-100-font-size);
+}
+
+/* Collegamenti: colore del testo */
+.footer-link {
+    color: var(--color-muted);
+    text-decoration: none;
+}
+
+/* Mouse: evidenzia il collegamento */
+.footer-link:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+/* Tastiera: mostra il contorno sul collegamento raggiunto */
+.footer-link:focus-visible {
+    outline: var(--focus-outline-width) solid var(--color-focus);
+    outline-offset: var(--focus-outline-offset);
+}
+
+/* Ritorno all’inizio: affianca testo e freccia */
+.footer-back {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+/* Freccia: riquadro con angoli arrotondati */
+.footer-back-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--spacing-32);
+    height: var(--spacing-32);
+    border: var(--border-width) solid var(--color-black);
+    border-radius: var(--radius-control);
+}
+
+/* Parte inferiore: linea sopra la firma */
+.footer-bottom {
+    border-top: var(--border-width) solid var(--color-black);
+}
+
+/* Firma: carattere, colore e spazio interno */
+.footer-credit {
+    padding: var(--spacing-24);
+    font-family: var(--font-mono);
+    font-size: var(--text-100-font-size);
+    color: var(--color-muted);
+}
+
+/* Schermi piccoli: riduce gli spazi e dispone il footer in colonna */
+@media (max-width: 800px) {
+    .project-cta {
+        padding: var(--spacing-40) var(--spacing-24);
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 
 
 
