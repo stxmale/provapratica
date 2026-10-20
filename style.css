@@ -1080,16 +1080,16 @@ aiutando a evitare che escano dallo schermo.*/
     font-weight: var(--font-weight-bold);
 }
 
-/* Assets: triangolo rivolto in basso */
+/* Triangoli Assets: stessa misura del case study */
 .assets-toggle {
-    transform: rotate(0deg);
-}
-
-/* Assets: triangolo rivolto in alto quando la voce è aperta */
-.assets-item[open] .assets-toggle {
+    --icon-size: var(--breakdownTabs-toggle-size);
     transform: rotate(180deg);
 }
 
+/* Voce aperta: triangolo verso l’alto */
+.assets-item[open] .assets-toggle {
+    transform: rotate(0deg);
+}
 /* Voce aperta: evidenzia la linea superiore */
 .assets-item[open] {
     border-top-color: var(--brand-color-accent-primary);
