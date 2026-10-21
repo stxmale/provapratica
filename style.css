@@ -1269,6 +1269,55 @@ aiutando a evitare che escano dallo schermo.*/
     }
 }
 
+/* Prototipi: spazi della sezione */
+.prototypes-content {
+    display: grid;
+    gap: var(--spacing-40);
+    padding: var(--spacing-64);
+    text-align: left;
+}
+
+/* Introduzione: spazio fra titolo e paragrafo */
+.prototypes-intro {
+    display: grid;
+    gap: 1em;
+}
+
+/* Computer: due colonne uguali */
+.prototypes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-40);
+}
+
+/* Ogni versione: titolo, descrizione e pulsante */
+.prototypes-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+/* Titoli delle due versioni */
+.prototypes-card h3 {
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Pulsanti: allineati in fondo ai due blocchi */
+.prototypes-card .button {
+    margin-top: auto;
+}
+
+/* Schermi piccoli: le due versioni una sopra l’altra */
+@media (max-width: 800px) {
+    .prototypes-content {
+        padding: var(--spacing-32) var(--spacing-24);
+    }
+
+    .prototypes-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /*A cosa servono ::before, ::after e position: relative nelle schede?
 ::before disegna la linea decorativa.
 ::after estende l’area cliccabile del pulsante sulla scheda. 
