@@ -1244,18 +1244,30 @@ aiutando a evitare che escano dallo schermo.*/
         align-items: flex-start;
     }
 }
-/* Concept: spazi uguali alle altre sezioni */
+/* Concept e Obiettivo: due colonne con testo a sinistra */
 .concept-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-64);
     padding: var(--spacing-64);
+    text-align: left;
 }
 
-/* Concept: spazi ridotti sugli schermi piccoli */
+/* Ogni parte: spazio fra titolo e paragrafo */
+.concept-part {
+    display: grid;
+    align-content: start;
+    gap: 1em;
+}
+
+/* Schermi piccoli: Concept sopra e Obiettivo sotto */
 @media (max-width: 800px) {
     .concept-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-40);
         padding: var(--spacing-32) var(--spacing-24);
     }
 }
-
 
 /*A cosa servono ::before, ::after e position: relative nelle schede?
 ::before disegna la linea decorativa.
