@@ -42,7 +42,7 @@ img {
     --color-border-muted: #191F1B;
     --color-border-muted-fixed: #E4EBE6;
     --color-cursor: #ff3c00;
-    --color-button-primary-bg: #08872B;
+    --color-button-primary-bg: #ff3c00;
     --icon-size: 1.25em;
     --breakdownTabs-title-gap: 1.5em;
     --breakdownTabs-toggle-size: 1.5em;
@@ -50,7 +50,7 @@ img {
     --breakdownTabs-button-gap: 0.75em;
     --breakdownTabs-text-gap-desktop: 0.75em;
     --breakdownTabs-text-padding-bottom: 0.75em;
-    --icon-color: #08872B;
+    --icon-color: #e33500;
     --color-button-secondary-bg: rgba(255, 255, 255, 0.12);
     --color-button-secondary-border: rgba(255, 255, 255, 0.06);
     --color-focus: #ff3c00;
@@ -86,9 +86,9 @@ img {
     --radius-pill: 100em;
     --layer-navigation: 90;
     --layer-skip-link: 100;
-    --brand-color-text-muted: #58635B;
+    --brand-color-text-muted: #865d50;
     --brand-color-text-default: #000000;
-    --brand-color-accent-primary: #0D6731;
+    --brand-color-accent-primary: #db2f00;
 }
 
 /* Schermi stretti: riduciamo le dimensioni dei titoli */
@@ -217,8 +217,9 @@ body {
 }
 
 
-/* Pulsante principale: fondo verde */
+/* Pulsante principale: fondo arancione e testo nero */
 .button-primary {
+    color: var(--color-black);
     background-color: var(--color-button-primary-bg);
     border-color: transparent;
 }
@@ -269,7 +270,7 @@ body {
     padding: var(--skip-link-padding);
     border-radius: var(--radius-control);
     background: var(--color-button-primary-bg);
-    color: var(--color-white);
+    color: var(--color-black);
     transform: translateY(calc(-100% - var(--skip-link-offset-block)));
 }
 
@@ -1243,7 +1244,17 @@ aiutando a evitare che escano dallo schermo.*/
         align-items: flex-start;
     }
 }
+/* Concept: spazi uguali alle altre sezioni */
+.concept-content {
+    padding: var(--spacing-64);
+}
 
+/* Concept: spazi ridotti sugli schermi piccoli */
+@media (max-width: 800px) {
+    .concept-content {
+        padding: var(--spacing-32) var(--spacing-24);
+    }
+}
 
 
 /*A cosa servono ::before, ::after e position: relative nelle schede?
