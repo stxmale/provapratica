@@ -730,7 +730,7 @@ body {
 
 /* Tema chiaro: colori ereditati dagli elementi della sezione bianca */
 .theme-light {
-    --color-muted:#5E5E5E;
+    --color-muted: #5E5E5E;
     --color-border-muted: var(--color-border-muted-fixed);
     --color-cursor: var(--icon-color);
 
@@ -1334,7 +1334,9 @@ aiutando a evitare che escano dallo schermo.*/
     }
 }
 
-/*A cosa servono ::before, ::after e position: relative nelle schede?
-::before disegna la linea decorativa.
-::after estende l’area cliccabile del pulsante sulla scheda. 
-position: relative sulla voce offre il riferimento per posizionare queste parti con absolute*/
+/* Anteprime dei prototipi: seguono la larghezza del blocco */
+.prototypes-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
