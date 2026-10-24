@@ -38,9 +38,9 @@ img {
     --font-mono: "Mona Sans Mono";
     --color-black: #000;
     --color-white: #fff;
-    --color-muted: #A4AEA6;
+    --color-muted: #AAAAAA;
     --color-border-muted: #2a100d;
-    --color-border-muted-fixed: #E4EBE6;
+    --color-border-muted-fixed: #E6E6E6;
     --color-cursor: #ff3c00;
     --color-button-primary-bg: #ff3c00;
     --icon-size: 1.25em;
@@ -297,11 +297,11 @@ body {
     --navigation-title-line-height: var(--text-100-line-height);
     --navigation-link-font-size: var(--text-100-font-size);
     --navigation-link-padding: 1em;
-    --navigation-link-hover-background: #151D17;
+    --navigation-link-hover-background: #191919;
     --navigation-toggle-font-size: 1em;
     --navigation-toggle-width: 3em;
     --navigation-toggle-padding: 0.25em 0.75em;
-    --navigation-toggle-open-background: #090D0A;
+    --navigation-toggle-open-background: #101010;
     --navigation-icon-size: 1em;
     --navigation-reveal-duration: 0.5s;
     --navigation-reveal-easing: ease;
@@ -713,12 +713,10 @@ body {
     font-weight: var(--font-weight-semibold);
 }
 
-
 /* Paragrafo: limite di larghezza quando la variabile è disponibile */
 .paragraph {
     max-width: var(--hero-text-max-width);
 }
-
 
 /* Titolo della sezione: dimensione, peso e righe equilibrate */
 .heading-size-4 {
@@ -732,7 +730,7 @@ body {
 
 /* Tema chiaro: colori ereditati dagli elementi della sezione bianca */
 .theme-light {
-    --color-muted: #58635B;
+    --color-muted:#5E5E5E;
     --color-border-muted: var(--color-border-muted-fixed);
     --color-cursor: var(--icon-color);
 
@@ -742,7 +740,7 @@ body {
 
 /* Tema scuro: testo chiaro e fondo nero */
 .theme-dark {
-    --color-muted: #A4AEA6;
+    --color-muted: #AAAAAA;
     background: var(--color-black);
     color: var(--color-white);
 }
