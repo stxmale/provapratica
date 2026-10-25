@@ -1340,3 +1340,45 @@ aiutando a evitare che escano dallo schermo.*/
     width: 100%;
     height: auto;
 }
+
+/* Idee di Radici: tre colonne con una linea superiore */
+.concept-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: var(--border-width) solid var(--color-border-muted);
+}
+
+/* Ogni riquadro: spazio interno e distanza fra titolo e testo */
+.concept-feature {
+    display: grid;
+    align-content: start;
+    gap: 1em;
+    padding: var(--spacing-40);
+    text-align: left;
+}
+
+/* Titoli dei riquadri */
+.concept-feature h3 {
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Linee verticali dopo il primo e il secondo riquadro */
+.concept-feature-divider {
+    border-right: var(--border-width) solid var(--color-border-muted);
+}
+
+/* Mobile: riquadri uno sotto l’altro */
+@media (max-width: 800px) {
+    .concept-features {
+        grid-template-columns: 1fr;
+    }
+
+    .concept-feature {
+        padding: var(--spacing-32) var(--spacing-24);
+    }
+
+    .concept-feature-divider {
+        border-right: 0;
+        border-bottom: var(--border-width) solid var(--color-border-muted);
+    }
+}
