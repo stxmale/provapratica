@@ -1303,9 +1303,21 @@ aiutando a evitare che escano dallo schermo.*/
     font-weight: var(--font-weight-semibold);
 }
 
-/* Pulsanti: allineati in fondo ai due blocchi */
-.prototypes-card .button {
-    margin-top: auto;
+/* Anteprima: contenitore di immagine e pulsante */
+.prototype-preview {
+    position: relative;
+    width: 100%;
+}
+
+/* Pulsante: sovrapposto all’immagine, in basso al centro */
+.prototype-preview .button {
+    position: absolute;
+    bottom: var(--spacing-24);
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(100% - var(--spacing-24));
+    text-align: center;
 }
 
 /* Schermi piccoli: le due versioni una sopra l’altra */
@@ -1381,4 +1393,11 @@ aiutando a evitare che escano dallo schermo.*/
         border-right: 0;
         border-bottom: var(--border-width) solid var(--color-border-muted);
     }
+}
+
+/* Riflessione personale: corsivo e linea arancione a sinistra */
+.highlights-quote {
+    font-style: italic;
+    border-left: var(--border-width) solid var(--brand-color-accent-primary);
+    padding-left: var(--spacing-24);
 }
